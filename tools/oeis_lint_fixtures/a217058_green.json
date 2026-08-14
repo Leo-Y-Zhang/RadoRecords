@@ -1,0 +1,16 @@
+{
+  "seq": "A217058",
+  "current_entry_text": "%S A217058 77,152,269,439,644,906,1204,1559\n%N A217058 Fixture.\n%K A217058 nonn,hard,more\n%O A217058 1,1\n%E A217058 a(6)-a(8) from _Tanbir Ahmed_, Aug 24 2012",
+  "new_data": "77, 152, 269, 439, 644, 906, 1204, 1559, 1972",
+  "new_extensions_lines": [
+    "a(9) from _Leo Y. Zhang_, Aug 13 2026"
+  ],
+  "discussion_note": "Added a(9) = 1972, verified before submission.",
+  "paste_date": "Aug 13 2026",
+  "scope": "data-extensions-only",
+  "certificate_gate_passed": true,
+  "post_edit_extensions": [
+    "a(6)-a(8) from _Tanbir Ahmed_, Aug 24 2012",
+    "a(9) from _Leo Y. Zhang_, Aug 13 2026"
+  ]
+}

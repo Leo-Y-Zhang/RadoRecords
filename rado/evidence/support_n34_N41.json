@@ -1,0 +1,21 @@
+{
+ "seq": "A250026",
+ "n": 34,
+ "N": 41,
+ "mode": "support",
+ "convention": {
+  "distinct": false,
+  "z_colored": true,
+  "equation": "x_1^2+...+x_n^2 = z^2",
+  "interval": "[1,N]"
+ },
+ "vars": 41,
+ "clauses": 12274314,
+ "build_s": 519.7,
+ "supports": 6137157,
+ "solve_s": 3.0,
+ "sat": true,
+ "coloring": "00000011111111111111111111111111111111110",
+ "witness_check": "ACCEPTED: good coloring of [1,41] for n=34",
+ "verdict": "SAT_WITNESS_VERIFIED"
+}

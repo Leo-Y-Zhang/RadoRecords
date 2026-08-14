@@ -1,0 +1,20 @@
+{
+ "seq": "A250026",
+ "n": 49,
+ "N": 50,
+ "mode": "reach",
+ "convention": {
+  "distinct": false,
+  "z_colored": true,
+  "equation": "x_1^2+...+x_n^2 = z^2",
+  "interval": "[1,N]"
+ },
+ "vars": 221192,
+ "clauses": 7001530,
+ "build_s": 4.2,
+ "solve_s": 1.4,
+ "sat": true,
+ "coloring": "00000011111111111111111111111111111111111111111101",
+ "witness_check": "ACCEPTED: good coloring of [1,50] for n=49",
+ "verdict": "SAT_WITNESS_VERIFIED"
+}

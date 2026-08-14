@@ -1,0 +1,21 @@
+{
+ "seq": "A250026",
+ "n": 37,
+ "N": 45,
+ "mode": "support",
+ "convention": {
+  "distinct": false,
+  "z_colored": true,
+  "equation": "x_1^2+...+x_n^2 = z^2",
+  "interval": "[1,N]"
+ },
+ "vars": 45,
+ "clauses": 39032324,
+ "build_s": 2444.6,
+ "supports": 19516162,
+ "solve_s": 0.2,
+ "sat": null,
+ "verdict": "SOLVER_ERROR",
+ "detail": "",
+ "note": "First attempt, 2026-08-14 02:06. Exited with neither 10 nor 20 and empty stdout and stderr after 0.2 s. Not reproduced: the identical instance was rebuilt the same morning and returned UNSAT in 50.7 s. Kept because a ceiling was inferred from this single run and written into the prose as fact."
+}

@@ -1,0 +1,62 @@
+{
+ "seq": "A250026",
+ "n": 33,
+ "mode": "reach",
+ "convention": {
+  "distinct": false,
+  "z_colored": true
+ },
+ "budget_s": 900.0,
+ "used_s": 19.5,
+ "last_sat_N": 36,
+ "first_unsat_N": 37,
+ "resolved": true,
+ "log": [
+  {
+   "N": 41,
+   "verdict": "UNSAT",
+   "build_s": 1.2,
+   "solve_s": 5.7,
+   "clauses": 2447434
+  },
+  {
+   "N": 21,
+   "verdict": "SAT_WITNESS_VERIFIED",
+   "build_s": 0.1,
+   "solve_s": 0.1,
+   "clauses": 285092
+  },
+  {
+   "N": 31,
+   "verdict": "SAT_WITNESS_VERIFIED",
+   "build_s": 0.6,
+   "solve_s": 0.4,
+   "clauses": 1017956
+  },
+  {
+   "N": 36,
+   "verdict": "SAT_WITNESS_VERIFIED",
+   "build_s": 1.0,
+   "solve_s": 0.3,
+   "clauses": 1631914
+  },
+  {
+   "N": 38,
+   "verdict": "UNSAT",
+   "build_s": 1.0,
+   "solve_s": 4.4,
+   "clauses": 1931602
+  },
+  {
+   "N": 37,
+   "verdict": "UNSAT",
+   "build_s": 0.9,
+   "solve_s": 3.9,
+   "clauses": 1778068
+  }
+ ],
+ "a_n_if_confirmed": 37,
+ "note": "PROBE ONLY: bisection under a timebox; a claim would need the full evidence pipeline of this repo",
+ "witness_at_last_sat": "000001111111111111111111111111111110",
+ "witness_check": "ACCEPTED: good coloring of [1,36] for n=33"
+}

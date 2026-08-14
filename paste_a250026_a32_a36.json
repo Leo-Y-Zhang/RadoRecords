@@ -1,0 +1,12 @@
+{
+ "seq": "A250026",
+ "current_entry_text": "%I A250026 #35 Nov 05 2025 15:22:28\n%S A250026 1,7825,105,37,23,18,20,20,15,16,20,23,17,21,26,17,23,28,25,29,29,26,\n%T A250026 36,32,27,38,33,35,41,36,41\n%N A250026 The 2-color Rado numbers for x_1^2 + x_2^2 + ... + x_n^2 = z^2.\n%C A250026 The value of a(2) was only recently discovered (see Heule, Kullmann, & Marek link). - _Kellen Myers_, May 27 2016\n%D A250026 Paul Erd\u0151s and R. L. Graham, Old and New Problems and Results in Combinatorial Number Theory, Universit\u00e9 de Gen\u00e8ve, L'Enseignement Math\u00e9matique 28 (1980).\n%H A250026 Marijn J. H. Heule, Oliver Kullmann, Victor W. Marek,  Solving and Verifying the boolean Pythagorean Triples problem via Cube-and-Conquer arXiv:1605.00723 [math.CO], May 2016.\n%H A250026 Kellen Myers, A Note on a Question of Erd\u0151s & Graham, arXiv:1501.05085 [math.CO], Jan 2015.\n%H A250026 Kellen Myers and Joseph Parrish, Some Nonlinear Rado Numbers, Integers, 18B (2018), #A6.\n%e A250026 The integers 1 through 105 cannot be 2-colored without inducing a monochromatic solution to x^2+y^2+w^2=z^2 (and 105 is the least such number), thus a(3)=105.\n%K A250026 nonn,hard,more\n%O A250026 1,2\n%A A250026 _Kellen Myers_, Nov 10 2014\n%E A250026 a(18)-a(30) from _Kellen Myers_, Mar 17 2015\n%E A250026 a(1)-a(2) from _Kellen Myers_, May 27 2016\n%E A250026 a(31) from _Leo Y. Zhang_, Aug 13 2026",
+ "new_data": "1, 7825, 105, 37, 23, 18, 20, 20, 15, 16, 20, 23, 17, 21, 26, 17, 23, 28, 25, 29, 29, 26, 36, 32, 27, 38, 33, 35, 41, 36, 41, 41, 37, 42, 44, 37",
+ "new_extensions_lines": [
+  "a(32)-a(36) from _Leo Y. Zhang_, Aug 14 2026"
+ ],
+ "discussion_note": "Five further terms by the same method, each with the two encodings agreeing and a drat-trim-verified refutation; I have kept this to data only.",
+ "paste_date": "Aug 14 2026",
+ "scope": "data-extensions-only",
+ "certificate_gate_passed": true
+}

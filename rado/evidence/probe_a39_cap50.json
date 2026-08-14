@@ -1,0 +1,37 @@
+{
+ "seq": "A250026",
+ "n": 39,
+ "mode": "reach",
+ "convention": {
+  "distinct": false,
+  "z_colored": true
+ },
+ "budget_s": 900.0,
+ "used_s": 8.5,
+ "last_sat_N": 50,
+ "first_unsat_N": null,
+ "resolved": false,
+ "log": [
+  {
+   "N": 41,
+   "verdict": "SAT_WITNESS_VERIFIED",
+   "build_s": 1.4,
+   "solve_s": 0.5,
+   "clauses": 2950492
+  },
+  {
+   "N": 46,
+   "verdict": "SAT_WITNESS_VERIFIED",
+   "build_s": 2.1,
+   "solve_s": 0.8,
+   "clauses": 4216950
+  },
+  {
+   "N": 50,
+   "verdict": "SAT_WITNESS_VERIFIED",
+   "build_s": 2.6,
+   "solve_s": 1.0,
+   "clauses": 5453584
+  }
+ ]
+}

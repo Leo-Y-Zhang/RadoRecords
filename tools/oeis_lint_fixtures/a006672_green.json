@@ -1,0 +1,22 @@
+{
+  "seq": "A006672",
+  "current_entry_text": "%S A006672 5,10,16,23,31,40,50\n%N A006672 Fixture.\n%K A006672 nonn,more\n%O A006672 1,1",
+  "new_data": null,
+  "new_extensions_lines": [],
+  "discussion_note": "References and links are now ordered by the surname of the first author.",
+  "paste_date": "Aug 13 2026",
+  "scope": "full",
+  "new_references": [
+    "B. M. Landman and A. Robertson, Ramsey Theory on the Integers, American Mathematical Society, 2014.",
+    "T. D. Parsons, Ramsey graphs and block designs, Trans. Amer. Math. Soc., 209 (1975), 33-44.",
+    "N. J. A. Sloane and Simon Plouffe, The Encyclopedia of Integer Sequences, Academic Press, 1995."
+  ],
+  "new_links": [
+    "G. S. Bloom, <a href=\"https://doi.org/10.1002/jgt.3190010000\">A note on generalized Ramsey numbers</a>",
+    "L. Boza, M. P. Revuelta, and M. I. Sanz, <a href=\"https://arxiv.org/abs/1908.00000\">On some Ramsey and van der Waerden type numbers</a>",
+    "S. A. Burr, <a href=\"https://doi.org/10.1016/0012-365X(75)90000-0\">Generalized Ramsey theory for graphs</a>",
+    "Erdős problems database contributors, <a href=\"https://www.erdosproblems.com/\">The Erdos problems database</a>",
+    "Kung-Kuen Tse, <a href=\"https://arxiv.org/abs/math/0409000\">On some van der Waerden type numbers</a>",
+    "UCSD Mathematics Department, <a href=\"https://mathweb.ucsd.edu/~vdw/\">Van der Waerden number pages</a>"
+  ]
+}

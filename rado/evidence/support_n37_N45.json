@@ -1,0 +1,22 @@
+{
+ "seq": "A250026",
+ "n": 37,
+ "N": 45,
+ "mode": "support",
+ "convention": {
+  "distinct": false,
+  "z_colored": true,
+  "equation": "x_1^2+...+x_n^2 = z^2",
+  "interval": "[1,N]"
+ },
+ "vars": 45,
+ "clauses": 39032324,
+ "supports": 19516162,
+ "build_s": 2994.5,
+ "cnf_bytes": 1285478685,
+ "solve_s": 50.7,
+ "returncode": 20,
+ "sat": false,
+ "verdict": "UNSAT",
+ "note": "Rebuilt 2026-08-14 after the first attempt died silently. Same n, same N, same encoder, 39,032,324 clauses in a 1.29 GB file: kissat returned 20 in 50.7 s. There is no allocation ceiling here."
+}

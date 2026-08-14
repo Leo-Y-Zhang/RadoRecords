@@ -1,0 +1,76 @@
+{
+ "seq": "A250026",
+ "n": 39,
+ "mode": "reach",
+ "convention": {
+  "distinct": false,
+  "z_colored": true
+ },
+ "budget_s": 1800.0,
+ "used_s": 163.0,
+ "last_sat_N": 51,
+ "first_unsat_N": 52,
+ "resolved": true,
+ "log": [
+  {
+   "N": 41,
+   "verdict": "SAT_WITNESS_VERIFIED",
+   "build_s": 1.5,
+   "solve_s": 0.5,
+   "clauses": 2950492
+  },
+  {
+   "N": 46,
+   "verdict": "SAT_WITNESS_VERIFIED",
+   "build_s": 2.0,
+   "solve_s": 0.8,
+   "clauses": 4216950
+  },
+  {
+   "N": 80,
+   "verdict": "UNSAT",
+   "build_s": 12.7,
+   "solve_s": 64.9,
+   "clauses": 22912950
+  },
+  {
+   "N": 63,
+   "verdict": "UNSAT",
+   "build_s": 5.7,
+   "solve_s": 27.9,
+   "clauses": 11077502
+  },
+  {
+   "N": 54,
+   "verdict": "UNSAT",
+   "build_s": 3.2,
+   "solve_s": 17.0,
+   "clauses": 6911810
+  },
+  {
+   "N": 50,
+   "verdict": "SAT_WITNESS_VERIFIED",
+   "build_s": 2.6,
+   "solve_s": 1.0,
+   "clauses": 5453584
+  },
+  {
+   "N": 52,
+   "verdict": "UNSAT",
+   "build_s": 2.9,
+   "solve_s": 16.3,
+   "clauses": 6154382
+  },
+  {
+   "N": 51,
+   "verdict": "SAT_WITNESS_VERIFIED",
+   "build_s": 2.9,
+   "solve_s": 1.0,
+   "clauses": 5796454
+  }
+ ],
+ "a_n_if_confirmed": 52,
+ "note": "PROBE ONLY: bisection under a timebox; a claim would need the full evidence pipeline of this repo",
+ "witness_at_last_sat": "000000011111111111111111111111111111111111111111110",
+ "witness_check": "ACCEPTED: good coloring of [1,51] for n=39"
+}

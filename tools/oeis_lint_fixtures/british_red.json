@@ -1,0 +1,12 @@
+{
+  "seq": "A250026",
+  "current_entry_text": "%S A250026 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30\n%N A250026 Fixture.\n%K A250026 nonn,more\n%O A250026 1,2\n%E A250026 a(25)-a(30) from _Tanbir Ahmed_, Sep 05 2012",
+  "new_data": "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 41",
+  "new_extensions_lines": [
+    "a(31) from _Leo Y. Zhang_, Aug 14 2026"
+  ],
+  "discussion_note": "Recomputed the colouring bound for the appended term as requested.",
+  "paste_date": "Aug 14 2026",
+  "scope": "data-extensions-only",
+  "certificate_gate_passed": true
+}

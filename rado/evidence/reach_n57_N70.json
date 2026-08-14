@@ -1,0 +1,18 @@
+{
+ "seq": "A250026",
+ "n": 57,
+ "N": 70,
+ "mode": "reach",
+ "convention": {
+  "distinct": false,
+  "z_colored": true,
+  "equation": "x_1^2+...+x_n^2 = z^2",
+  "interval": "[1,N]"
+ },
+ "vars": 515574,
+ "clauses": 23159314,
+ "build_s": 11.9,
+ "solve_s": 56.1,
+ "sat": false,
+ "verdict": "UNSAT"
+}
