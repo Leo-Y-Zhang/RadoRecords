@@ -37,6 +37,7 @@ import re
 import sys
 import unicodedata
 import datetime
+from itertools import pairwise
 
 __all__ = ["lint_spec", "lint_file", "selftest", "RULES", "LintInputError"]
 
@@ -406,7 +407,6 @@ def lint_spec(spec, today=None):
     old_terms = entry["terms"]
     nd = spec.get("new_data")
     data_edited = nd is not None
-    prefix_ok = True
     appended = []
     if data_edited:
         if "\t" in nd:
@@ -435,14 +435,16 @@ def lint_spec(spec, today=None):
                      "DATA term %r has a leading zero / negative zero" % t)
         post_terms = [t.strip() for t in tokens if t.strip()]
         if post_terms[:len(old_terms)] != old_terms:
-            k = next((i for i, (a, b) in enumerate(zip(old_terms, post_terms)) if a != b),
+            # strict=False on purpose: the two lists differ in length whenever a
+            # term was dropped, and the fallback below is what handles that case.
+            k = next((i for i, (a, b) in enumerate(zip(old_terms, post_terms, strict=False))
+                      if a != b),
                      min(len(old_terms), len(post_terms)))
             oldv = old_terms[k] if k < len(old_terms) else "<missing>"
             newv = post_terms[k] if k < len(post_terms) else "<missing>"
             fail("data-append-only",
                  "existing terms not preserved: term %d was %r, paste has %r"
                  % (k + 1, oldv, newv))
-            prefix_ok = False
         else:
             appended = post_terms[len(old_terms):]
             if not appended:
@@ -715,7 +717,7 @@ def _check_order(F, warn, lines, kind, rule):
             warn(rule, "surname parse flagged for human confirmation: %r -> sort key %r (%s)"
                  % (author, key, ",".join(flags)))
         keyed.append((key, _year_of(line), line, _norm(author)))
-    for (k1, y1, l1, a1), (k2, y2, l2, a2) in zip(keyed, keyed[1:]):
+    for (k1, y1, l1, a1), (k2, y2, l2, a2) in pairwise(keyed):
         if k1 > k2:
             F.append(("FAIL", rule,
                       "out of alphabetical order by first author's surname: %r (key %r) precedes %r (key %r)"
@@ -734,7 +736,7 @@ def _check_link_sections(F, warn, post_H):
     kinds = [classify_link(l) for l in post_H]
     seen_normal = seen_index = False
     normals = []
-    for line, k in zip(post_H, kinds):
+    for line, k in zip(post_H, kinds, strict=True):
         if k == "bfile":
             if seen_normal or seen_index:
                 F.append(("FAIL", "link-order-bfile-first",

@@ -1,0 +1,24 @@
+# A deliberately narrow rule set, and the reason for it.
+#
+# This repository's Python is the evidence behind terms that are live or under
+# review at the OEIS, so a lint that demanded a hundred and seventy stylistic
+# rewrites across the encoders and the submission linter would be a large diff
+# through verification code bought for nothing. What is selected here is the
+# part of ruff that finds defects rather than opinions:
+#
+#   F      pyflakes -- undefined names, unused imports, dead assignments.
+#   B905   zip() without an explicit strict=, which is how a length mismatch
+#          gets silently verified over whichever prefix happens to line up.
+#
+# The rest of bugbear is left out on purpose: B007 reports a loop variable as
+# unused when it is read after the loop, which is exactly the shape of
+# `rounds` in rado/lazy.py, and a gate that has to be argued with is worse
+# than no gate.
+#
+# The workflow pins the ruff version this file was validated against. Bump the
+# two together or not at all.
+
+target-version = "py313"
+
+[lint]
+select = ["F", "B905"]

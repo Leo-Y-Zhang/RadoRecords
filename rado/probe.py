@@ -16,14 +16,11 @@ from __future__ import annotations
 import argparse
 import json
 import os
-import subprocess
 import sys
-import tempfile
 import time
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-import encode            # noqa: E402
 import solve as solve_mod  # noqa: E402
 import verify_witness    # noqa: E402
 
@@ -40,7 +37,6 @@ def probe(n, budget_s, kissat, lo=2, cap=80, mode='reach'):
 
     def run(N):
         rec = {'N': N}
-        t0 = time.time()
         try:
             r = solve_mod.solve_instance(n, N, mode=mode, kissat=kissat,
                                          timeout=max(1.0, left()))

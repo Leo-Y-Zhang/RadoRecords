@@ -1,0 +1,73 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  # rado/verify_all.py IS the gate. On a runner with no kissat and no drat-trim
+  # it announces the solver sections as SKIPPED and runs everything that does
+  # not need them: the standalone checker's selftest, support enumeration
+  # against a naive multiset enumeration, the convention pinned against
+  # published values by pure exhaustion, every claimed term re-derived from its
+  # own evidence files, and a check that the prose matches the evidence. That is
+  # 380 checks in about two seconds.
+  #
+  # What CI deliberately does NOT do is the DRAT ladder. Proof files are
+  # regenerated rather than stored (.drat is in .gitignore), so replaying them
+  # needs kissat to produce them first, and the run takes far longer than a CI
+  # job should. It is a local step: install both binaries and run
+  # `python rado/verify_all.py`, or `--fast` to skip the slow support-mode runs.
+  gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+      - run: python rado/verify_all.py
+
+  # The submission linter carries its own fixture suite. It is what stands
+  # between a paste and an OEIS editor, so it is graded on every push.
+  oeis-lint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+      - run: python tools/oeis_lint.py --selftest
+
+  # Pinned to the version ruff.toml was validated against. An unpinned lint
+  # grades the code against whatever shipped that morning, which makes a red
+  # run say nothing about the commit.
+  lint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+      - run: pip install ruff==0.16.1
+      - run: ruff check .
+
+  gitleaks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - uses: gitleaks/gitleaks-action@v3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

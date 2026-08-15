@@ -130,6 +130,12 @@ and `DRAT_TRIM` environment variables, `--kissat`/`--drat-trim` flags, or
 `PATH`, and skip loudly when absent — a clean clone with no solver still
 passes on the solver-free evidence.
 
+Continuous integration runs exactly that solver-free half on every push: 380
+checks in about two seconds, plus the submission linter's own 46-case fixture
+suite. **A green run is not a re-certification.** Proof files are regenerated
+rather than stored, so the DRAT ladder needs kissat present to produce them and
+takes far longer than a CI job should; it stays a local step.
+
 ## Honest limits
 
 - The reproductions match the published values; they are reproductions, not
@@ -138,7 +144,7 @@ passes on the solver-free evidence.
   (both encodings, independent witness check, DRAT certificates).
   **`a(31) = 41` is published**: approved at OEIS on 2026-08-14 and now part
   of A250026. **`a(32)` to `a(60)` are a proposed draft** awaiting an editor
-  as of 2026-08-14. Until a term is approved it is this repository's claim,
+  as of 2026-08-15. Until a term is approved it is this repository's claim,
   not a published value, and this paragraph is checked against the live entry
   rather than remembered.
 - a(37) and above rest on `lazy` plus `reach`, not on the full `support`

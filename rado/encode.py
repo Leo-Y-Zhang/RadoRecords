@@ -261,7 +261,6 @@ def support_clause_pair(sup):
 
 def write_dimacs(path, n, N, mode='support', distinct=False, z_colored=True):
     """Write the instance; returns (num_vars, num_clauses, support_count)."""
-    t0 = time.time()
     if mode == 'reach':
         if distinct:
             raise ValueError('reach mode implements the nondistinct convention')
