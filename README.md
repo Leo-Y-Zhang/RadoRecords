@@ -132,9 +132,14 @@ passes on the solver-free evidence.
 
 Continuous integration runs exactly that solver-free half on every push: 380
 checks in about two seconds, plus the submission linter's own 46-case fixture
-suite. **A green run is not a re-certification.** Proof files are regenerated
-rather than stored, so the DRAT ladder needs kissat present to produce them and
-takes far longer than a CI job should; it stays a local step.
+suite. **A green push run is not a re-certification.**
+
+The re-certification is a second workflow, `Certificates`, run weekly and on
+demand rather than on every push. It builds kissat 4.0.1 and drat-trim from
+source on a machine that is not the author's, re-solves each claimed endpoint
+from a fresh encoding, and replays every refutation until drat-trim prints
+`s VERIFIED` — 454 checks. The slow support-mode re-solves are hours rather
+than minutes and stay a local step.
 
 ## Honest limits
 

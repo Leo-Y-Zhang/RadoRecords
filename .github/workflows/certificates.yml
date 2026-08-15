@@ -1,0 +1,54 @@
+name: Certificates
+
+# The push gate deliberately runs without a solver. This one is the other half:
+# it builds kissat and drat-trim from source, re-solves each claimed endpoint
+# from a fresh encoding, and replays every refutation until drat-trim prints the
+# literal line `s VERIFIED`. That is the claim this repository actually makes,
+# so it is worth running against a machine that is not the author's.
+#
+# It is not on `push`, for two reasons: it takes tens of minutes rather than
+# seconds, and a build of somebody else's tool going red says nothing about the
+# commit that triggered it. Weekly, or on demand from the Actions tab.
+#
+# `--fast` skips the slow support-mode re-solves. Those are hours, not minutes;
+# they stay a local step, and the README says so.
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 6 * * 1"
+
+permissions:
+  contents: read
+
+jobs:
+  certify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+
+      # Pinned to the version the evidence on disk was produced with. An
+      # unpinned solver would make a disagreement impossible to attribute.
+      - name: Build kissat 4.0.1
+        run: |
+          git clone --depth 1 --branch rel-4.0.1 https://github.com/arminbiere/kissat.git "$RUNNER_TEMP/kissat"
+          cd "$RUNNER_TEMP/kissat"
+          ./configure
+          make -j"$(nproc)"
+          "$RUNNER_TEMP/kissat/build/kissat" --version
+
+      - name: Build drat-trim
+        run: |
+          git clone --depth 1 https://github.com/marijnheule/drat-trim.git "$RUNNER_TEMP/drat-trim"
+          cc -O2 -o "$RUNNER_TEMP/drat-trim/drat-trim" "$RUNNER_TEMP/drat-trim/drat-trim.c"
+
+      - name: Re-solve and replay every certificate
+        env:
+          KISSAT: ${{ runner.temp }}/kissat/build/kissat
+          DRAT_TRIM: ${{ runner.temp }}/drat-trim/drat-trim
+        run: python rado/verify_all.py --fast
