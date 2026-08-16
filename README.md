@@ -14,8 +14,10 @@ convention; `a(1)=1` via `x_1=z=1`).
 
 This began as the pre-flight reproduction for an extension campaign — the
 last three published terms re-derived from scratch, twice — and became the
-extension: A250026 is published only to a(30), and every value from a(31)
-on below is new.
+extension: A250026 stood at a(30) when that began, and every value from
+a(31) on below came out of this repository. What is published and what is
+still a draft is in *Honest limits* below, and that paragraph is checked
+against the live entry rather than remembered.
 
 A term is **claimed** here only if it clears the whole bar: a SAT witness at
 N = a(n)-1 re-checked by a solver-free checker, a drat-trim-verified UNSAT
