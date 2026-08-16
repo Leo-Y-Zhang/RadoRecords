@@ -230,8 +230,13 @@ def main():
         check(f'a({n})={a} [lazy]: every clause equals the support of its '
               f'own solution', not bad_sup,
               fail_detail=f'{len(bad_sup)} mismatched')
-        check(f'a({n})={a} [lazy]: clause count matches the record',
-              ref['clauses'] == 2 * len(ref['justifications']))
+        # The empty clause set is satisfiable, so a refutation record carrying
+        # no clauses is not evidence of anything -- and the two checks above
+        # both pass vacuously on one, reporting "all 0 clauses justified".
+        check(f'a({n})={a} [lazy]: clause count matches the record and is '
+              f'not zero',
+              ref['clauses'] == 2 * len(ref['justifications'])
+              and ref['clauses'] > 0)
 
         r_ref, r_wit = load(f'reach_n{n}_N{a}.json'), load(f'reach_n{n}_N{a - 1}.json')
         if check(f'a({n})={a}: reach evidence present at both endpoints',
@@ -239,6 +244,21 @@ def main():
             check(f'a({n})={a}: reach agrees (UNSAT@{a} / SAT@{a - 1})',
                   r_ref['sat'] is False and r_wit['sat'] is True,
                   fail_detail=f"reach {r_ref['sat']} / {r_wit['sat']}")
+            # The support/reach branch above re-reads n, N and the convention
+            # off every record it uses and re-runs the solver-free checker on
+            # every witness coloring.  A reach record got this far on its
+            # `sat` field alone, so one written for a different n, under a
+            # convention this repository rejects, carrying a coloring the
+            # checker refuses, still counted as the second encoding agreeing.
+            check(f'a({n})={a}: reach records are n={n} at the right N under '
+                  f'the pinned convention',
+                  all(d['n'] == n and d['N'] == want
+                      and d['convention']['distinct'] is False
+                      and d['convention']['z_colored'] is True
+                      for d, want in ((r_ref, a), (r_wit, a - 1))))
+            r_good = verify_witness.check_witness(r_wit)
+            check(f'a({n})={a} [reach]: witness re-verified solver-free',
+                  r_good[0], fail_detail=r_good[1])
 
     section('the justification check is load-bearing, not decoration')
     # Each mutation below must be caught.  If any survives, the check above

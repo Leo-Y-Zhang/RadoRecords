@@ -18,7 +18,7 @@ jobs:
   # against a naive multiset enumeration, the convention pinned against
   # published values by pure exhaustion, every claimed term re-derived from its
   # own evidence files, and a check that the prose matches the evidence. That is
-  # 380 checks in about two seconds.
+  # 428 checks in about three seconds.
   #
   # What CI deliberately does NOT do is the DRAT ladder. Proof files are
   # regenerated rather than stored (.drat is in .gitignore), so replaying them
