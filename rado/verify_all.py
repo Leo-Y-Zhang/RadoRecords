@@ -34,8 +34,8 @@ EVID = os.path.join(HERE, 'evidence')
 PY = sys.executable
 
 # Every term this repository claims: n -> a(n).  28..30 reproduce the
-# published values; everything from 31 on is NEW (not in OEIS), established
-# here 2026-08-13/14 by the same full pipeline.  A term is listed here only
+# published values; everything from 31 on is NEW (first computed here),
+# established 2026-08-13/14 by the same full pipeline.  A term is listed here only
 # once it has all four evidence files (both encodings, both endpoints) and a
 # drat-trim-verified refutation in both encodings; terms resolved by the
 # reach encoding alone are documented in PREFLIGHT.md but NOT claimed here.

@@ -15,8 +15,8 @@ convention; `a(1)=1` via `x_1=z=1`).
 This began as the pre-flight reproduction for an extension campaign — the
 last three published terms re-derived from scratch, twice — and became the
 extension: A250026 stood at a(30) when that began, and every value from
-a(31) on below came out of this repository. What is published and what is
-still a draft is in *Honest limits* below, and that paragraph is checked
+a(31) on below came out of this repository and is now published in the
+OEIS. The dates are in *Honest limits* below, and that paragraph is checked
 against the live entry rather than remembered.
 
 A term is **claimed** here only if it clears the whole bar: a SAT witness at
@@ -149,9 +149,9 @@ than minutes and stay a local step.
   new results.
 - The new terms are stated only because they cleared the full pipeline
   (both encodings, independent witness check, DRAT certificates).
-  **`a(31) = 41` is published**: approved at OEIS on 2026-08-14 and now part
-  of A250026. **`a(32)` to `a(60)` are a proposed draft** awaiting an editor
-  as of 2026-08-15. Until a term is approved it is this repository's claim,
+  **`a(31)` to `a(60)` are published**: `a(31) = 41` was approved at OEIS on
+  2026-08-14 and `a(32)` to `a(60)` on 2026-08-19; all thirty are now part
+  of A250026. Until a term is approved it is this repository's claim,
   not a published value, and this paragraph is checked against the live entry
   rather than remembered.
 - a(37) and above rest on `lazy` plus `reach`, not on the full `support`

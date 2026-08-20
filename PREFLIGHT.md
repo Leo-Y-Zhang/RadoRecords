@@ -165,7 +165,7 @@ UNSATs are DRAT-certified:
 SAT at N = 40 and UNSAT at N = 41, agreeing across two unrelated
 encodings, give a(31) = 41. This term is NEW: OEIS A250026 ends at
 a(30) = 36 (checked 2026-08-13). a(31) = 41 was computed here first,
-2026-08-13, and awaits OEIS submission by the author. Note a(31) = a(29)
+2026-08-13, and was approved at OEIS on 2026-08-14. Note a(31) = a(29)
 = 41 while a(30) = 36 -- the sequence is not monotone, as the published
 terms already show.
 
@@ -299,12 +299,12 @@ everything through a(60) is now claimed.
 
 ### Status of these values
 
-None of a(31) .. a(40) is in OEIS: A250026 ends at a(30) = 36 (entry version
-#35 of Nov 05 2025, re-fetched read-only 2026-08-13).  a(31) = 41 was
-submitted on 2026-08-13 and is a proposed draft awaiting an editor.  The
-values in this section were computed here first, on 2026-08-13/14, and await
-submission by the author; until they are reviewed at OEIS they are this
-repository's claims, not published values.
+All of a(31) .. a(40) are now in OEIS.  A250026 ended at a(30) = 36 when this
+section was written (entry version #35 of Nov 05 2025, re-fetched read-only
+2026-08-13).  a(31) = 41 was submitted on 2026-08-13 and approved on
+2026-08-14; a(32) .. a(60) were approved on 2026-08-19.  The values in this
+section were computed here first, on 2026-08-13/14, and each is credited to
+the author.
 
 ## Hardness curve and GO/NO-GO
 
@@ -434,8 +434,8 @@ each of these; a(37) took 218.
 
 ### Status of these values
 
-None of a(31) .. a(60) is in OEIS.  a(31) = 41 was submitted on 2026-08-13
-and is a proposed draft.  The rest await submission by the author; until an
-editor reviews them they are this repository's claims, not published values.
+All of a(31) .. a(60) are now in OEIS.  a(31) = 41 was submitted on 2026-08-13
+and approved on 2026-08-14; a(32) .. a(60) were approved on 2026-08-19.  They
+were computed here first, and each is credited to the author.
 The stopping point a(60) is where the run stopped, not a wall — each further
 term costs seconds.
