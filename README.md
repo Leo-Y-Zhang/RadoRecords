@@ -119,22 +119,57 @@ probes, the timings and the full evidence round for every term.
 - `rado/probe.py` — timeboxed bisection probe of an unpublished term.
 - `rado/evidence/` — the JSON records every claim rests on.
 - `rado/verify_all.py` — the gate: re-checks every claim from scratch.
+- `tools/oeis_lint.py` — stdlib-only pre-paste linter for the OEIS edits these
+  terms were submitted as; `--selftest` runs its 46 fixtures.
+- `tools/attack_suite.py` — 28 subtly-violating pastes the linter has to
+  reject, so that a green `--selftest` means something.
 
 ## Verifying
 
+There is nothing to install. Every script here imports only the Python
+standard library: no requirements file, no virtual environment, no packages.
+Python 3.13 is what CI runs and the only version any of this is exercised on.
+It runs on Windows as well as Linux; the solver build below does not.
+
 ```
-python rado/verify_all.py          # full gate
+git clone https://github.com/Leo-Y-Zhang/RadoRecords.git
+cd RadoRecords
+python rado/verify_all.py          # the gate: 428 checks, exit 0
 python rado/verify_all.py --fast   # skips the slow support-mode re-solves
 ```
 
-Sections needing SAT tooling locate `kissat` / `drat-trim` via the `KISSAT`
-and `DRAT_TRIM` environment variables, `--kissat`/`--drat-trim` flags, or
-`PATH`, and skip loudly when absent — a clean clone with no solver still
-passes on the solver-free evidence.
+That one command is the whole test suite. The submission linter carries a
+separate fixture suite of its own, `python tools/oeis_lint.py --selftest`,
+46 cases, and CI grades that on every push too.
 
-Continuous integration runs exactly that solver-free half on every push: 428
-checks in about three seconds, plus the submission linter's own 46-case fixture
-suite. **A green push run is not a re-certification.**
+Sections needing SAT tooling locate `kissat` / `drat-trim` via the `KISSAT`
+and `DRAT_TRIM` environment variables or `PATH`, and skip loudly when absent
+— a clean clone with no solver still passes on the solver-free evidence, and
+the 428 above is that clean-clone number. `rado/drat_certify.py` also takes
+`--kissat` and `--drat-trim` as flags when driven on its own; `verify_all.py`
+does not, and would ignore them, so point the gate at a non-`PATH` solver
+through the environment.
+
+To run the half that CI keeps out of the push gate, build the two binaries from
+the same sources `.github/workflows/certificates.yml` builds them from — kissat
+pinned to the release the evidence on disk was produced with — somewhere
+outside the clone, and hand the gate their paths:
+
+```
+mkdir -p ~/sat && cd ~/sat
+git clone --depth 1 --branch rel-4.0.1 https://github.com/arminbiere/kissat.git
+(cd kissat && ./configure && make)
+git clone --depth 1 https://github.com/marijnheule/drat-trim.git
+cc -O2 -o drat-trim/drat-trim drat-trim/drat-trim.c
+
+cd /path/to/RadoRecords
+KISSAT=~/sat/kissat/build/kissat DRAT_TRIM=~/sat/drat-trim/drat-trim \
+  python rado/verify_all.py --fast
+```
+
+Continuous integration runs the solver-free half on every push, and only that:
+428 checks in about three seconds, plus the submission linter's own 46-case
+fixture suite. **A green push run is not a re-certification.**
 
 The re-certification is a second workflow, `Certificates`, run weekly and on
 demand rather than on every push. It builds kissat 4.0.1 and drat-trim from
