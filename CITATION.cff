@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use this software, or cite the values it establishes, please cite the archived version below."
+title: "RadoRecords: SAT witnesses and DRAT-certified refutations for the 2-color Rado numbers"
+abstract: >-
+  Computational evidence for terms a(31)-a(60) of OEIS A250026, the 2-color Rado
+  numbers of x_1^2 + x_2^2 + ... + x_n^2 = z^2. Lower bounds are explicit
+  colorings checked by a standard-library-only program that never invokes a
+  solver; upper bounds are SAT refutations certified with drat-trim, computed
+  under two independent encodings that must agree at every instance.
+type: software
+authors:
+  - family-names: Zhang
+    given-names: Leo Y.
+    orcid: "https://orcid.org/0009-0008-1145-7969"
+repository-code: "https://github.com/Leo-Y-Zhang/RadoRecords"
+license-url: "https://github.com/Leo-Y-Zhang/RadoRecords/blob/main/LICENSE"
+# Fill these three in from the Zenodo record created by the first release, then
+# commit. Until they are set this file says who wrote the software and where it
+# lives, which is true, but gives nobody a citable, permanent address -- and the
+# permanent address is the entire reason the OEIS link points at Zenodo and not
+# at a GitHub URL that one rename would break.
+# version: "1.0.0"
+# date-released: "2026-09-21"
+# doi: 10.5281/zenodo.XXXXXXXX
+# url: "https://doi.org/10.5281/zenodo.XXXXXXXX"
+keywords:
+  - Rado number
+  - Ramsey theory on the integers
+  - SAT solving
+  - DRAT proof
+  - certificate
+  - OEIS
+  - A250026

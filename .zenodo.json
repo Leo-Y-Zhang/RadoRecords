@@ -1,0 +1,34 @@
+{
+ "upload_type": "software",
+ "title": "RadoRecords: SAT witnesses and DRAT-certified refutations for the 2-color Rado numbers of x_1^2 + ... + x_n^2 = z^2",
+ "description": "Computational evidence for terms a(31)-a(60) of OEIS A250026, the 2-color Rado numbers of x_1^2 + x_2^2 + ... + x_n^2 = z^2. Lower bounds are explicit colorings checked by a standard-library-only program that never invokes a solver; upper bounds are SAT refutations certified with drat-trim, computed under two independent encodings that must agree at every instance. Includes the verification gate that re-derives every claim from the committed artifacts, and the pre-paste linter the OEIS submissions were checked with.",
+ "creators": [
+  {
+   "name": "Zhang, Leo Y.",
+   "orcid": "0009-0008-1145-7969"
+  }
+ ],
+ "keywords": [
+  "Rado number",
+  "Ramsey theory on the integers",
+  "SAT solving",
+  "DRAT proof",
+  "certificate",
+  "OEIS",
+  "A250026"
+ ],
+ "access_right": "open",
+ "license": "other-closed",
+ "related_identifiers": [
+  {
+   "identifier": "https://oeis.org/A250026",
+   "relation": "isSupplementTo",
+   "scheme": "url"
+  },
+  {
+   "identifier": "https://github.com/Leo-Y-Zhang/RadoRecords",
+   "relation": "isSupplementTo",
+   "scheme": "url"
+  }
+ ]
+}
