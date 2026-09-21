@@ -19,10 +19,10 @@ license-url: "https://github.com/Leo-Y-Zhang/RadoRecords/blob/main/LICENSE"
 # lives, which is true, but gives nobody a citable, permanent address -- and the
 # permanent address is the entire reason the OEIS link points at Zenodo and not
 # at a GitHub URL that one rename would break.
-# version: "1.0.0"
-# date-released: "2026-09-21"
-# doi: 10.5281/zenodo.XXXXXXXX
-# url: "https://doi.org/10.5281/zenodo.XXXXXXXX"
+version: "1.0.0"
+date-released: "2026-09-21"
+doi: 10.5281/zenodo.22883846
+url: "https://doi.org/10.5281/zenodo.22883846"
 keywords:
   - Rado number
   - Ramsey theory on the integers
