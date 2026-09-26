@@ -91,10 +91,13 @@ RULE_IDS = [r for r, _ in RULES]
 MON = "Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
 MONTHS = MON.split("|")
 EXT_RE = re.compile(
-    r"^a\((\d+)\)(?:-a\((\d+)\))? (?:from|added by) _Leo Y\. Zhang_, "
+    r"^a\(([0-9]+)\)(?:-a\(([0-9]+)\))? (?:from|added by) _Leo Y\. Zhang_, "
     r"(" + MON + r") ([0-3][0-9]) ([12][0-9]{3})$"
 )
-INT_RE = re.compile(r"-?\d+")
+# [0-9], not \d: in a str pattern \d matches any Unicode decimal digit, so an
+# Arabic-Indic or fullwidth "41" would pass as an integer (and int() converts
+# it).  An OEIS DATA term is ASCII base-10 or nothing.
+INT_RE = re.compile(r"-?[0-9]+")
 DATE_RE = re.compile(r"^(" + MON + r") ([0-3][0-9]) ([12][0-9]{3})$")
 
 US_SPELLING_DENYLIST = [
@@ -430,7 +433,7 @@ def lint_spec(spec, today=None):
                      "stray whitespace around term %r" % t)
             elif not INT_RE.fullmatch(t):
                 fail("data-integers-only", "non-integer DATA term %r" % t)
-            elif re.fullmatch(r"-?0\d+", t) or t == "-0":
+            elif re.fullmatch(r"-?0[0-9]+", t) or t == "-0":
                 fail("data-integers-only",
                      "DATA term %r has a leading zero / negative zero" % t)
         post_terms = [t.strip() for t in tokens if t.strip()]
@@ -1026,6 +1029,9 @@ def selftest(verbose=True):
                   False, {"data-comma-space-separated"}, False))
     cases.append(("u_bad_integer",
                   _unit_spec(new_data="3, 6, 9, 12, 1e5"),
+                  False, {"data-integers-only"}, False))
+    cases.append(("u_non_ascii_digits",
+                  _unit_spec(new_data="3, 6, 9, 12, \uff11\uff15"),
                   False, {"data-integers-only"}, False))
     cases.append(("u_altered_term",
                   _unit_spec(new_data="3, 6, 9, 13, 15"),

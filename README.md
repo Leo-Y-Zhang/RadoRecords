@@ -120,7 +120,7 @@ probes, the timings and the full evidence round for every term.
 - `rado/evidence/` — the JSON records every claim rests on.
 - `rado/verify_all.py` — the gate: re-checks every claim from scratch.
 - `tools/oeis_lint.py` — stdlib-only pre-paste linter for the OEIS edits these
-  terms were submitted as; `--selftest` runs its 46 fixtures.
+  terms were submitted as; `--selftest` runs its 47 fixtures.
 - `tools/attack_suite.py` — 28 subtly-violating pastes the linter has to
   reject, so that a green `--selftest` means something.
 
@@ -140,7 +140,7 @@ python rado/verify_all.py --fast   # skips the slow support-mode re-solves
 
 That one command is the whole test suite. The submission linter carries a
 separate fixture suite of its own, `python tools/oeis_lint.py --selftest`,
-46 cases, and CI grades that on every push too.
+47 cases, and CI grades that on every push too.
 
 Sections needing SAT tooling locate `kissat` / `drat-trim` via the `KISSAT`
 and `DRAT_TRIM` environment variables or `PATH`, and skip loudly when absent
@@ -168,7 +168,7 @@ KISSAT=~/sat/kissat/build/kissat DRAT_TRIM=~/sat/drat-trim/drat-trim \
 ```
 
 Continuous integration runs the solver-free half on every push, and only that:
-430 checks in about three seconds, plus the submission linter's own 46-case
+430 checks in about three seconds, plus the submission linter's own 47-case
 fixture suite. **A green push run is not a re-certification.**
 
 The re-certification is a second workflow, `Certificates`, run weekly and on
