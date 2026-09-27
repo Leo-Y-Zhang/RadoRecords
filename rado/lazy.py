@@ -121,7 +121,18 @@ def check_justification(pairs, z, n, N):
 
     Takes the multiset form: exactly n x values, all of them and z inside
     [1,N], and the squares summing to z^2.  Anyone can redo this by hand.
+
+    Every value and count has to be an actual integer.  The arithmetic alone
+    is not enough: 25 x 1^2 + 12 x 2.5^2 = 10^2 exactly in floating point, so
+    a record read back from JSON could otherwise carry a "solution" whose
+    support is not a set of integers at all, and so not a clause of anything.
     """
+    def is_int(v):
+        return type(v) is int          # bool is an int subclass; refuse it
+
+    if not is_int(z) or not all(is_int(v) and is_int(count)
+                                for v, count in pairs):
+        return False
     if not 1 <= z <= N:
         return False
     if any(count < 1 or not 1 <= v <= N for v, count in pairs):
