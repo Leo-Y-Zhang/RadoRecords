@@ -279,6 +279,14 @@ def main():
         for name, (x, z) in mutations.items():
             check(f'mutation caught: {name}',
                   not lazy.check_justification(x, z, n, N))
+        # A forged clause whose arithmetic is exact in floating point:
+        # 25 x 1^2 + 12 x 2.5^2 = 10^2, n = 37 values, all inside [1,45].
+        check('mutation caught: a non-integer value with exact arithmetic',
+              not lazy.check_justification([[1, 25], [2.5, 12]], 10, n, N))
+        # JSON `true` loads as a bool, which Python counts as the integer 1:
+        # 33 x true^2 + 4 x 2^2 = 7^2.
+        check('mutation caught: a boolean standing in for the value 1',
+              not lazy.check_justification([[True, 33], [2, 4]], 7, n, N))
         # and the multiset really does have to hold exactly n values
         check('mutation caught: wrong number of x values',
               not lazy.check_justification(j['x'], j['z'], n + 1, N))
