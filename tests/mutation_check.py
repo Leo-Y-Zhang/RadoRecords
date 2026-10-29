@@ -5,10 +5,10 @@ Run with the same Python that has pytest installed:
     python tests/mutation_check.py after
 
 The before phase runs the existing solver-free gate and linter selftest.
-Only regressions among previously passing linter cases count as kills: the
-redacted checkout already has failing fixtures. The after phase runs the
-relevant pytest file for every mutant, including those killed by the gate.
-Copies and subprocesses stay under /work; no solver or network is used.
+Both must pass unmutated; a mutant is killed if either then fails. The after
+phase runs the relevant pytest file for every mutant, including those killed
+by the gate. Copies stay in a temporary directory inside the repository; no
+solver or network is used.
 """
 from __future__ import annotations
 
@@ -17,7 +17,6 @@ from collections import Counter
 import json
 import os
 from pathlib import Path
-import re
 import shutil
 import subprocess
 import sys
@@ -80,8 +79,9 @@ MUTATIONS = {
         ('support-comparison', "if derived != sorted(j['support']):", "if derived == sorted(j['support']):"),
         ('drop-z', 'sorted({v for v, _c in pairs} | {z})', 'sorted({v for v, _c in pairs})'),
         ('ignore-problems', 'if problems:\n', 'if False:\n'),
-        ('verification-marker', "if 's VERIFIED' in out:", "if 'VERIFIED' in out:"),
-        ('any-output', "if 's VERIFIED' in out:", 'if out:'),
+        ('verification-marker', "elif 's VERIFIED' in status:", "elif 's VERIFIED' in out:"),
+        ('any-output', "elif 's VERIFIED' in status:", 'elif out:'),
+        ('failure-first', "if 's NOT VERIFIED' in status:", 'if False:'),
         ('unsat-exit', 'if solve.returncode != 20:', 'if solve.returncode != 0:'),
     ],
     'rado/verify_all.py': [
@@ -133,17 +133,15 @@ def main():
     if args.phase == 'before':
         gate = run(['rado/verify_all.py'], ROOT)
         linter = run(['tools/oeis_lint.py', '--selftest'], ROOT)
-        if gate['returncode'] != 0:
-            raise SystemExit('The unmutated gate must pass first')
+        if gate['returncode'] != 0 or linter['returncode'] != 0:
+            raise SystemExit('The unmutated gate and linter selftest must pass first')
         results = {'baseline_gate': gate, 'baseline_linter': linter, 'mutants': []}
     else:
-        results = json.loads(RESULTS.read_text())
+        results = json.loads(RESULTS.read_text(encoding='utf-8'))
         clean = run(['-m', 'pytest', '-q', 'tests'], ROOT)
         if clean['returncode'] != 0:
             raise SystemExit(clean['output'])
         results['baseline_pytest'] = clean
-    passing_cases = set(re.findall(r'^ok   (\S+)',
-                                   results['baseline_linter']['output'], re.M))
     with tempfile.TemporaryDirectory(prefix='.mutation-', dir=ROOT) as tmp:
         work = Path(tmp)
         for directory in ('rado', 'tools', 'tests'):
@@ -154,23 +152,22 @@ def main():
             shutil.copy2(ROOT / filename, work / filename)
         for module, mutations in MUTATIONS.items():
             for name, old, new in mutations:
-                source = (work / module).read_text()
+                source = (work / module).read_text(encoding='utf-8')
                 if source.count(old) != 1:
                     raise SystemExit(f'{module}:{name}: expected one source match')
                 mutated = source.replace(old, new, 1)
                 compile(mutated, module, 'exec')
-                (work / module).write_text(mutated)
+                (work / module).write_text(mutated, encoding='utf-8')
                 if args.phase == 'before':
                     gate = run(['rado/verify_all.py'], work)
                     lint = run(['tools/oeis_lint.py', '--selftest'], work)
-                    still_passing = set(re.findall(r'^ok   (\S+)', lint['output'], re.M))
                     record = {'module': module, 'name': name,
                               'line': source[:source.index(old)].count('\n') + 1,
                               'old': old, 'new': new,
                               'killed_before': gate['returncode'] != 0
-                              or bool(passing_cases - still_passing),
+                              or lint['returncode'] != 0,
                               'gate_returncode': gate['returncode'],
-                              'linter_regressions': sorted(passing_cases - still_passing)}
+                              'linter_returncode': lint['returncode']}
                     results['mutants'].append(record)
                 else:
                     record = next(r for r in results['mutants']
@@ -184,8 +181,8 @@ def main():
                 killed = record['killed_' + args.phase]
                 print(f'{module}:{name}: {"KILLED" if killed else "SURVIVED"}', flush=True)
                 # Restore this source before trying the next independent mutant.
-                (work / module).write_text(source)
-                RESULTS.write_text(json.dumps(results, indent=2) + '\n')
+                (work / module).write_text(source, encoding='utf-8')
+                RESULTS.write_text(json.dumps(results, indent=2) + '\n', encoding='utf-8')
     counts = Counter(r['module'] for r in results['mutants'])
     for module, count in counts.items():
         before = sum(r['killed_before'] for r in results['mutants'] if r['module'] == module)
