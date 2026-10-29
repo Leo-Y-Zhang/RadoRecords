@@ -84,6 +84,7 @@ def simulate_replay(monkeypatch, tmp_path, output, solve_code=20, timeout_at=Non
     ('s VERIFIE', 'SOLVER_ERROR'),
     ('', 'SOLVER_ERROR'),
     ('c replay failed\n', 'SOLVER_ERROR'),
+    ('c previous s VERIFIED result\n', 'SOLVER_ERROR'),
 ])
 def test_only_successful_replay_certifies(monkeypatch, tmp_path, output, verdict):
     rec, calls = simulate_replay(monkeypatch, tmp_path, output)
