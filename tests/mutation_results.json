@@ -1,0 +1,1133 @@
+{
+  "baseline_gate": {
+    "returncode": 0,
+    "output": "\n=== standalone checker selftest ===\n  [PASS] verify_witness --selftest\n\n=== support enumeration equals naive multiset enumeration (small) ===\n  [PASS] n=2 N=26: supports match (9)\n  [PASS] n=3 N=20: supports match (22)\n  [PASS] n=4 N=15: supports match (42)\n  [PASS] n=9 N=16: supports match (568)\n\n=== convention pinned against published values by pure exhaustion ===\n  [PASS] a(5)=23: every coloring of [1,23] fails, [1,22] has a good one\n  [PASS] a(5)=23: brute witness survives the independent checker\n  [PASS] a(6)=18: every coloring of [1,18] fails, [1,17] has a good one\n  [PASS] a(6)=18: brute witness survives the independent checker\n  [PASS] a(9)=15: every coloring of [1,15] fails, [1,14] has a good one\n  [PASS] a(9)=15: brute witness survives the independent checker\n  [PASS] a(10)=16: every coloring of [1,16] fails, [1,15] has a good one\n  [PASS] a(10)=16: brute witness survives the independent checker\n\n=== rejected convention variants stay rejected ===\n  [PASS] distinct x_i: zero solutions at n=28, N=35 (instance trivially SAT, contradicting a(28)=35)\n  [PASS] z uncolored: n=9 already UNSAT far below the published a(9)=15\n\n=== each claimed term, re-derived from its own evidence files ===\n  [PASS] CLAIMS here and EXPECTED in drat_certify.py agree\n  [PASS] a(28)=35: all four evidence files present\n  [PASS] a(28)=35: every record is n=28 under the pinned convention\n  [PASS] a(28)=35 [support]: UNSAT at N=35\n  [PASS] a(28)=35 [support]: SAT at N=34\n  [PASS] a(28)=35 [support]: witness re-verified solver-free\n  [PASS] a(28)=35 [support]: checker rejects corrupted witnesses\n  [PASS] a(28)=35 [reach]: UNSAT at N=35\n  [PASS] a(28)=35 [reach]: SAT at N=34\n  [PASS] a(28)=35 [reach]: witness re-verified solver-free\n  [PASS] a(28)=35 [reach]: checker rejects corrupted witnesses\n  [PASS] a(28)=35: SAT at 34 and UNSAT at 35 give a(28)=35 in both encodings\n  [PASS] a(29)=41: all four evidence files present\n  [PASS] a(29)=41: every record is n=29 under the pinned convention\n  [PASS] a(29)=41 [support]: UNSAT at N=41\n  [PASS] a(29)=41 [support]: SAT at N=40\n  [PASS] a(29)=41 [support]: witness re-verified solver-free\n  [PASS] a(29)=41 [support]: checker rejects corrupted witnesses\n  [PASS] a(29)=41 [reach]: UNSAT at N=41\n  [PASS] a(29)=41 [reach]: SAT at N=40\n  [PASS] a(29)=41 [reach]: witness re-verified solver-free\n  [PASS] a(29)=41 [reach]: checker rejects corrupted witnesses\n  [PASS] a(29)=41: SAT at 40 and UNSAT at 41 give a(29)=41 in both encodings\n  [PASS] a(30)=36: all four evidence files present\n  [PASS] a(30)=36: every record is n=30 under the pinned convention\n  [PASS] a(30)=36 [support]: UNSAT at N=36\n  [PASS] a(30)=36 [support]: SAT at N=35\n  [PASS] a(30)=36 [support]: witness re-verified solver-free\n  [PASS] a(30)=36 [support]: checker rejects corrupted witnesses\n  [PASS] a(30)=36 [reach]: UNSAT at N=36\n  [PASS] a(30)=36 [reach]: SAT at N=35\n  [PASS] a(30)=36 [reach]: witness re-verified solver-free\n  [PASS] a(30)=36 [reach]: checker rejects corrupted witnesses\n  [PASS] a(30)=36: SAT at 35 and UNSAT at 36 give a(30)=36 in both encodings\n  [PASS] a(31)=41: all four evidence files present\n  [PASS] a(31)=41: every record is n=31 under the pinned convention\n  [PASS] a(31)=41 [support]: UNSAT at N=41\n  [PASS] a(31)=41 [support]: SAT at N=40\n  [PASS] a(31)=41 [support]: witness re-verified solver-free\n  [PASS] a(31)=41 [support]: checker rejects corrupted witnesses\n  [PASS] a(31)=41 [reach]: UNSAT at N=41\n  [PASS] a(31)=41 [reach]: SAT at N=40\n  [PASS] a(31)=41 [reach]: witness re-verified solver-free\n  [PASS] a(31)=41 [reach]: checker rejects corrupted witnesses\n  [PASS] a(31)=41: SAT at 40 and UNSAT at 41 give a(31)=41 in both encodings\n  [PASS] a(32)=41: all four evidence files present\n  [PASS] a(32)=41: every record is n=32 under the pinned convention\n  [PASS] a(32)=41 [support]: UNSAT at N=41\n  [PASS] a(32)=41 [support]: SAT at N=40\n  [PASS] a(32)=41 [support]: witness re-verified solver-free\n  [PASS] a(32)=41 [support]: checker rejects corrupted witnesses\n  [PASS] a(32)=41 [reach]: UNSAT at N=41\n  [PASS] a(32)=41 [reach]: SAT at N=40\n  [PASS] a(32)=41 [reach]: witness re-verified solver-free\n  [PASS] a(32)=41 [reach]: checker rejects corrupted witnesses\n  [PASS] a(32)=41: SAT at 40 and UNSAT at 41 give a(32)=41 in both encodings\n  [PASS] a(33)=37: all four evidence files present\n  [PASS] a(33)=37: every record is n=33 under the pinned convention\n  [PASS] a(33)=37 [support]: UNSAT at N=37\n  [PASS] a(33)=37 [support]: SAT at N=36\n  [PASS] a(33)=37 [support]: witness re-verified solver-free\n  [PASS] a(33)=37 [support]: checker rejects corrupted witnesses\n  [PASS] a(33)=37 [reach]: UNSAT at N=37\n  [PASS] a(33)=37 [reach]: SAT at N=36\n  [PASS] a(33)=37 [reach]: witness re-verified solver-free\n  [PASS] a(33)=37 [reach]: checker rejects corrupted witnesses\n  [PASS] a(33)=37: SAT at 36 and UNSAT at 37 give a(33)=37 in both encodings\n  [PASS] a(34)=42: all four evidence files present\n  [PASS] a(34)=42: every record is n=34 under the pinned convention\n  [PASS] a(34)=42 [support]: UNSAT at N=42\n  [PASS] a(34)=42 [support]: SAT at N=41\n  [PASS] a(34)=42 [support]: witness re-verified solver-free\n  [PASS] a(34)=42 [support]: checker rejects corrupted witnesses\n  [PASS] a(34)=42 [reach]: UNSAT at N=42\n  [PASS] a(34)=42 [reach]: SAT at N=41\n  [PASS] a(34)=42 [reach]: witness re-verified solver-free\n  [PASS] a(34)=42 [reach]: checker rejects corrupted witnesses\n  [PASS] a(34)=42: SAT at 41 and UNSAT at 42 give a(34)=42 in both encodings\n  [PASS] a(35)=44: all four evidence files present\n  [PASS] a(35)=44: every record is n=35 under the pinned convention\n  [PASS] a(35)=44 [support]: UNSAT at N=44\n  [PASS] a(35)=44 [support]: SAT at N=43\n  [PASS] a(35)=44 [support]: witness re-verified solver-free\n  [PASS] a(35)=44 [support]: checker rejects corrupted witnesses\n  [PASS] a(35)=44 [reach]: UNSAT at N=44\n  [PASS] a(35)=44 [reach]: SAT at N=43\n  [PASS] a(35)=44 [reach]: witness re-verified solver-free\n  [PASS] a(35)=44 [reach]: checker rejects corrupted witnesses\n  [PASS] a(35)=44: SAT at 43 and UNSAT at 44 give a(35)=44 in both encodings\n  [PASS] a(36)=37: all four evidence files present\n  [PASS] a(36)=37: every record is n=36 under the pinned convention\n  [PASS] a(36)=37 [support]: UNSAT at N=37\n  [PASS] a(36)=37 [support]: SAT at N=36\n  [PASS] a(36)=37 [support]: witness re-verified solver-free\n  [PASS] a(36)=37 [support]: checker rejects corrupted witnesses\n  [PASS] a(36)=37 [reach]: UNSAT at N=37\n  [PASS] a(36)=37 [reach]: SAT at N=36\n  [PASS] a(36)=37 [reach]: witness re-verified solver-free\n  [PASS] a(36)=37 [reach]: checker rejects corrupted witnesses\n  [PASS] a(36)=37: SAT at 36 and UNSAT at 37 give a(36)=37 in both encodings\n\n=== terms carried by the lazy encoding ===\n  [PASS] LAZY_CLAIMS here and LAZY_EXPECTED in drat_certify.py agree\n  [PASS] no term is claimed twice\n  [PASS] claimed n run contiguously from 28 to 60 (OEIS DATA cannot skip a term)\n  [PASS] a(37)=45: both lazy evidence files present\n  [PASS] a(37)=45 [lazy]: UNSAT at N=45, SAT at N=44\n  [PASS] a(37)=45 [lazy]: records are n=37 under the pinned convention\n  [PASS] a(37)=45 [lazy]: witness re-verified solver-free\n  [PASS] a(37)=45 [lazy]: checker rejects corrupted witnesses\n  [PASS] a(37)=45 [lazy]: all 109 clauses justified by a real solution\n  [PASS] a(37)=45 [lazy]: every clause equals the support of its own solution\n  [PASS] a(37)=45 [lazy]: clause count matches the record and is not zero\n  [PASS] a(37)=45: reach evidence present at both endpoints\n  [PASS] a(37)=45: reach agrees (UNSAT@45 / SAT@44)\n  [PASS] a(37)=45: reach records are n=37 at the right N under the pinned convention\n  [PASS] a(37)=45 [reach]: witness re-verified solver-free\n  [PASS] a(38)=47: both lazy evidence files present\n  [PASS] a(38)=47 [lazy]: UNSAT at N=47, SAT at N=46\n  [PASS] a(38)=47 [lazy]: records are n=38 under the pinned convention\n  [PASS] a(38)=47 [lazy]: witness re-verified solver-free\n  [PASS] a(38)=47 [lazy]: checker rejects corrupted witnesses\n  [PASS] a(38)=47 [lazy]: all 201 clauses justified by a real solution\n  [PASS] a(38)=47 [lazy]: every clause equals the support of its own solution\n  [PASS] a(38)=47 [lazy]: clause count matches the record and is not zero\n  [PASS] a(38)=47: reach evidence present at both endpoints\n  [PASS] a(38)=47: reach agrees (UNSAT@47 / SAT@46)\n  [PASS] a(38)=47: reach records are n=38 at the right N under the pinned convention\n  [PASS] a(38)=47 [reach]: witness re-verified solver-free\n  [PASS] a(39)=52: both lazy evidence files present\n  [PASS] a(39)=52 [lazy]: UNSAT at N=52, SAT at N=51\n  [PASS] a(39)=52 [lazy]: records are n=39 under the pinned convention\n  [PASS] a(39)=52 [lazy]: witness re-verified solver-free\n  [PASS] a(39)=52 [lazy]: checker rejects corrupted witnesses\n  [PASS] a(39)=52 [lazy]: all 220 clauses justified by a real solution\n  [PASS] a(39)=52 [lazy]: every clause equals the support of its own solution\n  [PASS] a(39)=52 [lazy]: clause count matches the record and is not zero\n  [PASS] a(39)=52: reach evidence present at both endpoints\n  [PASS] a(39)=52: reach agrees (UNSAT@52 / SAT@51)\n  [PASS] a(39)=52: reach records are n=39 at the right N under the pinned convention\n  [PASS] a(39)=52 [reach]: witness re-verified solver-free\n  [PASS] a(40)=47: both lazy evidence files present\n  [PASS] a(40)=47 [lazy]: UNSAT at N=47, SAT at N=46\n  [PASS] a(40)=47 [lazy]: records are n=40 under the pinned convention\n  [PASS] a(40)=47 [lazy]: witness re-verified solver-free\n  [PASS] a(40)=47 [lazy]: checker rejects corrupted witnesses\n  [PASS] a(40)=47 [lazy]: all 55 clauses justified by a real solution\n  [PASS] a(40)=47 [lazy]: every clause equals the support of its own solution\n  [PASS] a(40)=47 [lazy]: clause count matches the record and is not zero\n  [PASS] a(40)=47: reach evidence present at both endpoints\n  [PASS] a(40)=47: reach agrees (UNSAT@47 / SAT@46)\n  [PASS] a(40)=47: reach records are n=40 at the right N under the pinned convention\n  [PASS] a(40)=47 [reach]: witness re-verified solver-free\n  [PASS] a(41)=47: both lazy evidence files present\n  [PASS] a(41)=47 [lazy]: UNSAT at N=47, SAT at N=46\n  [PASS] a(41)=47 [lazy]: records are n=41 under the pinned convention\n  [PASS] a(41)=47 [lazy]: witness re-verified solver-free\n  [PASS] a(41)=47 [lazy]: checker rejects corrupted witnesses\n  [PASS] a(41)=47 [lazy]: all 171 clauses justified by a real solution\n  [PASS] a(41)=47 [lazy]: every clause equals the support of its own solution\n  [PASS] a(41)=47 [lazy]: clause count matches the record and is not zero\n  [PASS] a(41)=47: reach evidence present at both endpoints\n  [PASS] a(41)=47: reach agrees (UNSAT@47 / SAT@46)\n  [PASS] a(41)=47: reach records are n=41 at the right N under the pinned convention\n  [PASS] a(41)=47 [reach]: witness re-verified solver-free\n  [PASS] a(42)=54: both lazy evidence files present\n  [PASS] a(42)=54 [lazy]: UNSAT at N=54, SAT at N=53\n  [PASS] a(42)=54 [lazy]: records are n=42 under the pinned convention\n  [PASS] a(42)=54 [lazy]: witness re-verified solver-free\n  [PASS] a(42)=54 [lazy]: checker rejects corrupted witnesses\n  [PASS] a(42)=54 [lazy]: all 132 clauses justified by a real solution\n  [PASS] a(42)=54 [lazy]: every clause equals the support of its own solution\n  [PASS] a(42)=54 [lazy]: clause count matches the record and is not zero\n  [PASS] a(42)=54: reach evidence present at both endpoints\n  [PASS] a(42)=54: reach agrees (UNSAT@54 / SAT@53)\n  [PASS] a(42)=54: reach records are n=42 at the right N under the pinned convention\n  [PASS] a(42)=54 [reach]: witness re-verified solver-free\n  [PASS] a(43)=48: both lazy evidence files present\n  [PASS] a(43)=48 [lazy]: UNSAT at N=48, SAT at N=47\n  [PASS] a(43)=48 [lazy]: records are n=43 under the pinned convention\n  [PASS] a(43)=48 [lazy]: witness re-verified solver-free\n  [PASS] a(43)=48 [lazy]: checker rejects corrupted witnesses\n  [PASS] a(43)=48 [lazy]: all 97 clauses justified by a real solution\n  [PASS] a(43)=48 [lazy]: every clause equals the support of its own solution\n  [PASS] a(43)=48 [lazy]: clause count matches the record and is not zero\n  [PASS] a(43)=48: reach evidence present at both endpoints\n  [PASS] a(43)=48: reach agrees (UNSAT@48 / SAT@47)\n  [PASS] a(43)=48: reach records are n=43 at the right N under the pinned convention\n  [PASS] a(43)=48 [reach]: witness re-verified solver-free\n  [PASS] a(44)=56: both lazy evidence files present\n  [PASS] a(44)=56 [lazy]: UNSAT at N=56, SAT at N=55\n  [PASS] a(44)=56 [lazy]: records are n=44 under the pinned convention\n  [PASS] a(44)=56 [lazy]: witness re-verified solver-free\n  [PASS] a(44)=56 [lazy]: checker rejects corrupted witnesses\n  [PASS] a(44)=56 [lazy]: all 152 clauses justified by a real solution\n  [PASS] a(44)=56 [lazy]: every clause equals the support of its own solution\n  [PASS] a(44)=56 [lazy]: clause count matches the record and is not zero\n  [PASS] a(44)=56: reach evidence present at both endpoints\n  [PASS] a(44)=56: reach agrees (UNSAT@56 / SAT@55)\n  [PASS] a(44)=56: reach records are n=44 at the right N under the pinned convention\n  [PASS] a(44)=56 [reach]: witness re-verified solver-free\n  [PASS] a(45)=56: both lazy evidence files present\n  [PASS] a(45)=56 [lazy]: UNSAT at N=56, SAT at N=55\n  [PASS] a(45)=56 [lazy]: records are n=45 under the pinned convention\n  [PASS] a(45)=56 [lazy]: witness re-verified solver-free\n  [PASS] a(45)=56 [lazy]: checker rejects corrupted witnesses\n  [PASS] a(45)=56 [lazy]: all 297 clauses justified by a real solution\n  [PASS] a(45)=56 [lazy]: every clause equals the support of its own solution\n  [PASS] a(45)=56 [lazy]: clause count matches the record and is not zero\n  [PASS] a(45)=56: reach evidence present at both endpoints\n  [PASS] a(45)=56: reach agrees (UNSAT@56 / SAT@55)\n  [PASS] a(45)=56: reach records are n=45 at the right N under the pinned convention\n  [PASS] a(45)=56 [reach]: witness re-verified solver-free\n  [PASS] a(46)=50: both lazy evidence files present\n  [PASS] a(46)=50 [lazy]: UNSAT at N=50, SAT at N=49\n  [PASS] a(46)=50 [lazy]: records are n=46 under the pinned convention\n  [PASS] a(46)=50 [lazy]: witness re-verified solver-free\n  [PASS] a(46)=50 [lazy]: checker rejects corrupted witnesses\n  [PASS] a(46)=50 [lazy]: all 121 clauses justified by a real solution\n  [PASS] a(46)=50 [lazy]: every clause equals the support of its own solution\n  [PASS] a(46)=50 [lazy]: clause count matches the record and is not zero\n  [PASS] a(46)=50: reach evidence present at both endpoints\n  [PASS] a(46)=50: reach agrees (UNSAT@50 / SAT@49)\n  [PASS] a(46)=50: reach records are n=46 at the right N under the pinned convention\n  [PASS] a(46)=50 [reach]: witness re-verified solver-free\n  [PASS] a(47)=57: both lazy evidence files present\n  [PASS] a(47)=57 [lazy]: UNSAT at N=57, SAT at N=56\n  [PASS] a(47)=57 [lazy]: records are n=47 under the pinned convention\n  [PASS] a(47)=57 [lazy]: witness re-verified solver-free\n  [PASS] a(47)=57 [lazy]: checker rejects corrupted witnesses\n  [PASS] a(47)=57 [lazy]: all 274 clauses justified by a real solution\n  [PASS] a(47)=57 [lazy]: every clause equals the support of its own solution\n  [PASS] a(47)=57 [lazy]: clause count matches the record and is not zero\n  [PASS] a(47)=57: reach evidence present at both endpoints\n  [PASS] a(47)=57: reach agrees (UNSAT@57 / SAT@56)\n  [PASS] a(47)=57: reach records are n=47 at the right N under the pinned convention\n  [PASS] a(47)=57 [reach]: witness re-verified solver-free\n  [PASS] a(48)=58: both lazy evidence files present\n  [PASS] a(48)=58 [lazy]: UNSAT at N=58, SAT at N=57\n  [PASS] a(48)=58 [lazy]: records are n=48 under the pinned convention\n  [PASS] a(48)=58 [lazy]: witness re-verified solver-free\n  [PASS] a(48)=58 [lazy]: checker rejects corrupted witnesses\n  [PASS] a(48)=58 [lazy]: all 90 clauses justified by a real solution\n  [PASS] a(48)=58 [lazy]: every clause equals the support of its own solution\n  [PASS] a(48)=58 [lazy]: clause count matches the record and is not zero\n  [PASS] a(48)=58: reach evidence present at both endpoints\n  [PASS] a(48)=58: reach agrees (UNSAT@58 / SAT@57)\n  [PASS] a(48)=58: reach records are n=48 at the right N under the pinned convention\n  [PASS] a(48)=58 [reach]: witness re-verified solver-free\n  [PASS] a(49)=51: both lazy evidence files present\n  [PASS] a(49)=51 [lazy]: UNSAT at N=51, SAT at N=50\n  [PASS] a(49)=51 [lazy]: records are n=49 under the pinned convention\n  [PASS] a(49)=51 [lazy]: witness re-verified solver-free\n  [PASS] a(49)=51 [lazy]: checker rejects corrupted witnesses\n  [PASS] a(49)=51 [lazy]: all 51 clauses justified by a real solution\n  [PASS] a(49)=51 [lazy]: every clause equals the support of its own solution\n  [PASS] a(49)=51 [lazy]: clause count matches the record and is not zero\n  [PASS] a(49)=51: reach evidence present at both endpoints\n  [PASS] a(49)=51: reach agrees (UNSAT@51 / SAT@50)\n  [PASS] a(49)=51: reach records are n=49 at the right N under the pinned convention\n  [PASS] a(49)=51 [reach]: witness re-verified solver-free\n  [PASS] a(50)=60: both lazy evidence files present\n  [PASS] a(50)=60 [lazy]: UNSAT at N=60, SAT at N=59\n  [PASS] a(50)=60 [lazy]: records are n=50 under the pinned convention\n  [PASS] a(50)=60 [lazy]: witness re-verified solver-free\n  [PASS] a(50)=60 [lazy]: checker rejects corrupted witnesses\n  [PASS] a(50)=60 [lazy]: all 212 clauses justified by a real solution\n  [PASS] a(50)=60 [lazy]: every clause equals the support of its own solution\n  [PASS] a(50)=60 [lazy]: clause count matches the record and is not zero\n  [PASS] a(50)=60: reach evidence present at both endpoints\n  [PASS] a(50)=60: reach agrees (UNSAT@60 / SAT@59)\n  [PASS] a(50)=60: reach records are n=50 at the right N under the pinned convention\n  [PASS] a(50)=60 [reach]: witness re-verified solver-free\n  [PASS] a(51)=67: both lazy evidence files present\n  [PASS] a(51)=67 [lazy]: UNSAT at N=67, SAT at N=66\n  [PASS] a(51)=67 [lazy]: records are n=51 under the pinned convention\n  [PASS] a(51)=67 [lazy]: witness re-verified solver-free\n  [PASS] a(51)=67 [lazy]: checker rejects corrupted witnesses\n  [PASS] a(51)=67 [lazy]: all 230 clauses justified by a real solution\n  [PASS] a(51)=67 [lazy]: every clause equals the support of its own solution\n  [PASS] a(51)=67 [lazy]: clause count matches the record and is not zero\n  [PASS] a(51)=67: reach evidence present at both endpoints\n  [PASS] a(51)=67: reach agrees (UNSAT@67 / SAT@66)\n  [PASS] a(51)=67: reach records are n=51 at the right N under the pinned convention\n  [PASS] a(51)=67 [reach]: witness re-verified solver-free\n  [PASS] a(52)=59: both lazy evidence files present\n  [PASS] a(52)=59 [lazy]: UNSAT at N=59, SAT at N=58\n  [PASS] a(52)=59 [lazy]: records are n=52 under the pinned convention\n  [PASS] a(52)=59 [lazy]: witness re-verified solver-free\n  [PASS] a(52)=59 [lazy]: checker rejects corrupted witnesses\n  [PASS] a(52)=59 [lazy]: all 77 clauses justified by a real solution\n  [PASS] a(52)=59 [lazy]: every clause equals the support of its own solution\n  [PASS] a(52)=59 [lazy]: clause count matches the record and is not zero\n  [PASS] a(52)=59: reach evidence present at both endpoints\n  [PASS] a(52)=59: reach agrees (UNSAT@59 / SAT@58)\n  [PASS] a(52)=59: reach records are n=52 at the right N under the pinned convention\n  [PASS] a(52)=59 [reach]: witness re-verified solver-free\n  [PASS] a(53)=60: both lazy evidence files present\n  [PASS] a(53)=60 [lazy]: UNSAT at N=60, SAT at N=59\n  [PASS] a(53)=60 [lazy]: records are n=53 under the pinned convention\n  [PASS] a(53)=60 [lazy]: witness re-verified solver-free\n  [PASS] a(53)=60 [lazy]: checker rejects corrupted witnesses\n  [PASS] a(53)=60 [lazy]: all 233 clauses justified by a real solution\n  [PASS] a(53)=60 [lazy]: every clause equals the support of its own solution\n  [PASS] a(53)=60 [lazy]: clause count matches the record and is not zero\n  [PASS] a(53)=60: reach evidence present at both endpoints\n  [PASS] a(53)=60: reach agrees (UNSAT@60 / SAT@59)\n  [PASS] a(53)=60: reach records are n=53 at the right N under the pinned convention\n  [PASS] a(53)=60 [reach]: witness re-verified solver-free\n  [PASS] a(54)=68: both lazy evidence files present\n  [PASS] a(54)=68 [lazy]: UNSAT at N=68, SAT at N=67\n  [PASS] a(54)=68 [lazy]: records are n=54 under the pinned convention\n  [PASS] a(54)=68 [lazy]: witness re-verified solver-free\n  [PASS] a(54)=68 [lazy]: checker rejects corrupted witnesses\n  [PASS] a(54)=68 [lazy]: all 231 clauses justified by a real solution\n  [PASS] a(54)=68 [lazy]: every clause equals the support of its own solution\n  [PASS] a(54)=68 [lazy]: clause count matches the record and is not zero\n  [PASS] a(54)=68: reach evidence present at both endpoints\n  [PASS] a(54)=68: reach agrees (UNSAT@68 / SAT@67)\n  [PASS] a(54)=68: reach records are n=54 at the right N under the pinned convention\n  [PASS] a(54)=68 [reach]: witness re-verified solver-free\n  [PASS] a(55)=61: both lazy evidence files present\n  [PASS] a(55)=61 [lazy]: UNSAT at N=61, SAT at N=60\n  [PASS] a(55)=61 [lazy]: records are n=55 under the pinned convention\n  [PASS] a(55)=61 [lazy]: witness re-verified solver-free\n  [PASS] a(55)=61 [lazy]: checker rejects corrupted witnesses\n  [PASS] a(55)=61 [lazy]: all 144 clauses justified by a real solution\n  [PASS] a(55)=61 [lazy]: every clause equals the support of its own solution\n  [PASS] a(55)=61 [lazy]: clause count matches the record and is not zero\n  [PASS] a(55)=61: reach evidence present at both endpoints\n  [PASS] a(55)=61: reach agrees (UNSAT@61 / SAT@60)\n  [PASS] a(55)=61: reach records are n=55 at the right N under the pinned convention\n  [PASS] a(55)=61 [reach]: witness re-verified solver-free\n  [PASS] a(56)=62: both lazy evidence files present\n  [PASS] a(56)=62 [lazy]: UNSAT at N=62, SAT at N=61\n  [PASS] a(56)=62 [lazy]: records are n=56 under the pinned convention\n  [PASS] a(56)=62 [lazy]: witness re-verified solver-free\n  [PASS] a(56)=62 [lazy]: checker rejects corrupted witnesses\n  [PASS] a(56)=62 [lazy]: all 177 clauses justified by a real solution\n  [PASS] a(56)=62 [lazy]: every clause equals the support of its own solution\n  [PASS] a(56)=62 [lazy]: clause count matches the record and is not zero\n  [PASS] a(56)=62: reach evidence present at both endpoints\n  [PASS] a(56)=62: reach agrees (UNSAT@62 / SAT@61)\n  [PASS] a(56)=62: reach records are n=56 at the right N under the pinned convention\n  [PASS] a(56)=62 [reach]: witness re-verified solver-free\n  [PASS] a(57)=70: both lazy evidence files present\n  [PASS] a(57)=70 [lazy]: UNSAT at N=70, SAT at N=69\n  [PASS] a(57)=70 [lazy]: records are n=57 under the pinned convention\n  [PASS] a(57)=70 [lazy]: witness re-verified solver-free\n  [PASS] a(57)=70 [lazy]: checker rejects corrupted witnesses\n  [PASS] a(57)=70 [lazy]: all 256 clauses justified by a real solution\n  [PASS] a(57)=70 [lazy]: every clause equals the support of its own solution\n  [PASS] a(57)=70 [lazy]: clause count matches the record and is not zero\n  [PASS] a(57)=70: reach evidence present at both endpoints\n  [PASS] a(57)=70: reach agrees (UNSAT@70 / SAT@69)\n  [PASS] a(57)=70: reach records are n=57 at the right N under the pinned convention\n  [PASS] a(57)=70 [reach]: witness re-verified solver-free\n  [PASS] a(58)=63: both lazy evidence files present\n  [PASS] a(58)=63 [lazy]: UNSAT at N=63, SAT at N=62\n  [PASS] a(58)=63 [lazy]: records are n=58 under the pinned convention\n  [PASS] a(58)=63 [lazy]: witness re-verified solver-free\n  [PASS] a(58)=63 [lazy]: checker rejects corrupted witnesses\n  [PASS] a(58)=63 [lazy]: all 128 clauses justified by a real solution\n  [PASS] a(58)=63 [lazy]: every clause equals the support of its own solution\n  [PASS] a(58)=63 [lazy]: clause count matches the record and is not zero\n  [PASS] a(58)=63: reach evidence present at both endpoints\n  [PASS] a(58)=63: reach agrees (UNSAT@63 / SAT@62)\n  [PASS] a(58)=63: reach records are n=58 at the right N under the pinned convention\n  [PASS] a(58)=63 [reach]: witness re-verified solver-free\n  [PASS] a(59)=72: both lazy evidence files present\n  [PASS] a(59)=72 [lazy]: UNSAT at N=72, SAT at N=71\n  [PASS] a(59)=72 [lazy]: records are n=59 under the pinned convention\n  [PASS] a(59)=72 [lazy]: witness re-verified solver-free\n  [PASS] a(59)=72 [lazy]: checker rejects corrupted witnesses\n  [PASS] a(59)=72 [lazy]: all 227 clauses justified by a real solution\n  [PASS] a(59)=72 [lazy]: every clause equals the support of its own solution\n  [PASS] a(59)=72 [lazy]: clause count matches the record and is not zero\n  [PASS] a(59)=72: reach evidence present at both endpoints\n  [PASS] a(59)=72: reach agrees (UNSAT@72 / SAT@71)\n  [PASS] a(59)=72: reach records are n=59 at the right N under the pinned convention\n  [PASS] a(59)=72 [reach]: witness re-verified solver-free\n  [PASS] a(60)=71: both lazy evidence files present\n  [PASS] a(60)=71 [lazy]: UNSAT at N=71, SAT at N=70\n  [PASS] a(60)=71 [lazy]: records are n=60 under the pinned convention\n  [PASS] a(60)=71 [lazy]: witness re-verified solver-free\n  [PASS] a(60)=71 [lazy]: checker rejects corrupted witnesses\n  [PASS] a(60)=71 [lazy]: all 144 clauses justified by a real solution\n  [PASS] a(60)=71 [lazy]: every clause equals the support of its own solution\n  [PASS] a(60)=71 [lazy]: clause count matches the record and is not zero\n  [PASS] a(60)=71: reach evidence present at both endpoints\n  [PASS] a(60)=71: reach agrees (UNSAT@71 / SAT@70)\n  [PASS] a(60)=71: reach records are n=60 at the right N under the pinned convention\n  [PASS] a(60)=71 [reach]: witness re-verified solver-free\n\n=== the justification check is load-bearing, not decoration ===\n  [PASS] a(37) evidence available to mutate\n  [PASS] unmutated justification passes\n  [PASS] mutation caught: z shifted by one\n  [PASS] mutation caught: a count incremented\n  [PASS] mutation caught: a value incremented\n  [PASS] mutation caught: a count dropped to zero\n  [PASS] mutation caught: z pushed outside the interval\n  [PASS] mutation caught: a non-integer value with exact arithmetic\n  [PASS] mutation caught: a boolean standing in for the value 1\n  [PASS] mutation caught: wrong number of x values\n\n=== prose matches evidence ===\n  [PASS] PREFLIGHT.md present\n  [PASS] PREFLIGHT.md states a(28) = 35\n  [PASS] PREFLIGHT.md states a(29) = 41\n  [PASS] PREFLIGHT.md states a(30) = 36\n  [PASS] PREFLIGHT.md states a(31) = 41\n  [PASS] PREFLIGHT.md states a(32) = 41\n  [PASS] PREFLIGHT.md states a(33) = 37\n  [PASS] PREFLIGHT.md states a(34) = 42\n  [PASS] PREFLIGHT.md states a(35) = 44\n  [PASS] PREFLIGHT.md states a(36) = 37\n  [PASS] PREFLIGHT.md documents: 'repeats allowed'\n  [PASS] PREFLIGHT.md documents: 'z is colored'\n  [PASS] PREFLIGHT.md documents: 'distinct'\n  [PASS] PREFLIGHT.md documents: 'GO'\n\n=== SAT/UNSAT re-solves and DRAT replay (SKIPPED: kissat, drat-trim not on PATH / env) ===\n\n430 passed, 0 failed\n\nEVERY CLAIM IN THIS REPOSITORY IS SUPPORTED BY EVIDENCE ON DISK.\n"
+  },
+  "baseline_linter": {
+    "returncode": 1,
+    "output": "ok   a006672_red\nok   a006672_green\nok   a217058_red\nok   u_trailing_comma\nok   u_missing_space\nok   u_bad_integer\nok   u_non_ascii_digits\nok   u_altered_term\nok   u_ext_trailing_period\nok   u_ext_invalid_date\nok   u_ext_inserted_not_appended\nok   u_ext_housekeeping\nok   u_missing_ext_credit\nok   u_paste_date_bad\nSELFTEST FAIL a217058_green: expected ok=True got False (failed rules: ['ext-line-format', 'ext-term-range-matches-data']); green case has failures: ['ext-line-format', 'ext-term-range-matches-data']\nSELFTEST FAIL british_red: unexpected extra failures: ['ext-line-format', 'ext-term-range-matches-data']\nSELFTEST FAIL a250026_green: expected ok=True got False (failed rules: ['ext-line-format', 'ext-term-range-matches-data']); green case has failures: ['ext-line-format', 'ext-term-range-matches-data']\nSELFTEST FAIL u_green_base: expected ok=True got False (failed rules: ['ext-line-format', 'ext-term-range-matches-data']); green case has failures: ['ext-line-format', 'ext-term-range-matches-data']\nSELFTEST FAIL u_too_few_terms: unexpected extra failures: ['ext-line-format', 'ext-term-range-matches-data']\nSELFTEST FAIL u_negative_nonn: unexpected extra failures: ['ext-line-format', 'ext-term-range-matches-data']\nSELFTEST FAIL u_gate_false: unexpected extra failures: ['ext-line-format', 'ext-term-range-matches-data']\nSELFTEST FAIL u_gate_missing_warn_only: expected ok=True got False (failed rules: ['ext-line-format', 'ext-term-range-matches-data']); green case has failures: ['ext-line-format', 'ext-term-range-matches-data']\nSELFTEST FAIL u_ext_wrong_date: expected failing rules missing: ['ext-date-is-paste-date']\nSELFTEST FAIL u_ext_wrong_range: unexpected extra failures: ['ext-line-format']\nSELFTEST FAIL u_deleted_reference: unexpected extra failures: ['ext-line-format', 'ext-term-range-matches-data']\nSELFTEST FAIL u_refs_unsorted: unexpected extra failures: ['ext-line-format', 'ext-term-range-matches-data']\nSELFTEST FAIL u_bfile_not_first: unexpected extra failures: ['ext-line-format', 'ext-term-range-matches-data']\nSELFTEST FAIL u_index_not_last: unexpected extra failures: ['ext-line-format', 'ext-term-range-matches-data']\nSELFTEST FAIL u_bare_url_link: unexpected extra failures: ['ext-line-format', 'ext-term-range-matches-data']\nSELFTEST FAIL u_initials_unspaced: unexpected extra failures: ['ext-line-format', 'ext-term-range-matches-data']\nSELFTEST FAIL u_email_in_note: unexpected extra failures: ['ext-line-format', 'ext-term-range-matches-data']\nSELFTEST FAIL u_tab_in_note: unexpected extra failures: ['ext-line-format', 'ext-term-range-matches-data']\nSELFTEST FAIL u_nth_notation: unexpected extra failures: ['ext-line-format', 'ext-term-range-matches-data']\nSELFTEST FAIL u_hyphenated_form: unexpected extra failures: ['ext-line-format', 'ext-term-range-matches-data']\nSELFTEST FAIL u_question_in_note: unexpected extra failures: ['ext-line-format', 'ext-term-range-matches-data']\nSELFTEST FAIL u_two_sentence_note: unexpected extra failures: ['ext-line-format', 'ext-term-range-matches-data']\nSELFTEST FAIL u_url_in_note: unexpected extra failures: ['ext-line-format', 'ext-term-range-matches-data']\nSELFTEST FAIL u_full_month_date: unexpected extra failures: ['ext-line-format', 'ext-term-range-matches-data']\nSELFTEST FAIL u_unicode_math: unexpected extra failures: ['ext-line-format', 'ext-term-range-matches-data']\nSELFTEST FAIL u_unicode_name_warn_only: expected ok=True got False (failed rules: ['ext-line-format', 'ext-term-range-matches-data']); green case has failures: ['ext-line-format', 'ext-term-range-matches-data']\nSELFTEST FAIL u_bfile_mention_in_scope: unexpected extra failures: ['ext-line-format', 'ext-term-range-matches-data']\nSELFTEST FAIL u_scope_violation: unexpected extra failures: ['ext-line-format', 'ext-term-range-matches-data']\nSELFTEST FAIL u_unwrapped_signature: expected failing rules missing: ['sign-name-underscore-markup']\nSELFTEST FAIL u_start_without_end: unexpected extra failures: ['ext-line-format', 'ext-term-range-matches-data']\nSELFTEST FAIL u_start_end_balanced: expected ok=True got False (failed rules: ['ext-line-format', 'ext-term-range-matches-data', 'sign-multiparagraph-wrapper']); green case has failures: ['ext-line-format', 'ext-term-range-matches-data', 'sign-multiparagraph-wrapper']\nSELFTEST FAIL u_bad_comment_signature: unexpected extra failures: ['ext-line-format', 'ext-term-range-matches-data']\nSELFTEST FAIL u_long_data_warn_only: expected ok=True got False (failed rules: ['ext-line-format', 'ext-term-range-matches-data']); green case has failures: ['ext-line-format', 'ext-term-range-matches-data']\nSELFTEST: 47 cases, 14 passed, 33 failed\n"
+  },
+  "mutants": [
+    {
+      "module": "rado/verify_witness.py",
+      "name": "sat-identity",
+      "line": 71,
+      "old": "if doc['sat'] is not True:",
+      "new": "if doc['sat'] is False:",
+      "killed_before": false,
+      "gate_returncode": 0,
+      "linter_regressions": [],
+      "pytest_returncode": 1,
+      "pytest_output": "..F\n=================================== FAILURES ===================================\n_________________ test_malformed_witness_is_rejected[changes1] _________________\ntests/test_witness.py:28: in test_malformed_witness_is_rejected\n    assert not verify_witness.check_witness(witness(**changes))[0]\nE   assert not True\n=========================== short test summary info ============================\nFAILED tests/test_witness.py::test_malformed_witness_is_rejected[changes1] - ...\n!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!\n1 failed, 2 passed in 4.74s\n",
+      "killed_after": true,
+      "pytest_command": [
+        "-m",
+        "pytest",
+        "-q",
+        "-x",
+        "--tb=short",
+        "tests/test_witness.py"
+      ]
+    },
+    {
+      "module": "rado/verify_witness.py",
+      "name": "long-coloring",
+      "line": 73,
+      "old": "len(coloring) != N:",
+      "new": "len(coloring) < N:",
+      "killed_before": false,
+      "gate_returncode": 0,
+      "linter_regressions": [],
+      "pytest_returncode": 1,
+      "pytest_output": ".....F\n=================================== FAILURES ===================================\n_________________ test_malformed_witness_is_rejected[changes4] _________________\ntests/test_witness.py:28: in test_malformed_witness_is_rejected\n    assert not verify_witness.check_witness(witness(**changes))[0]\nE   assert not True\n=========================== short test summary info ============================\nFAILED tests/test_witness.py::test_malformed_witness_is_rejected[changes4] - ...\n!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!\n1 failed, 5 passed in 4.12s\n",
+      "killed_after": true,
+      "pytest_command": [
+        "-m",
+        "pytest",
+        "-q",
+        "-x",
+        "--tb=short",
+        "tests/test_witness.py"
+      ]
+    },
+    {
+      "module": "rado/verify_witness.py",
+      "name": "alphabet",
+      "line": 75,
+      "old": "if set(coloring) - set('01'):",
+      "new": "if False:",
+      "killed_before": false,
+      "gate_returncode": 0,
+      "linter_regressions": [],
+      "pytest_returncode": 1,
+      "pytest_output": "......F\n=================================== FAILURES ===================================\n_________________ test_malformed_witness_is_rejected[changes5] _________________\ntests/test_witness.py:28: in test_malformed_witness_is_rejected\n    assert not verify_witness.check_witness(witness(**changes))[0]\nE   assert not True\n=========================== short test summary info ============================\nFAILED tests/test_witness.py::test_malformed_witness_is_rejected[changes5] - ...\n!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!\n1 failed, 6 passed in 4.50s\n",
+      "killed_after": true,
+      "pytest_command": [
+        "-m",
+        "pytest",
+        "-q",
+        "-x",
+        "--tb=short",
+        "tests/test_witness.py"
+      ]
+    },
+    {
+      "module": "rado/verify_witness.py",
+      "name": "missing-field",
+      "line": 67,
+      "old": "('n', 'N', 'sat', 'coloring')",
+      "new": "('n', 'N', 'sat')",
+      "killed_before": false,
+      "gate_returncode": 0,
+      "linter_regressions": [],
+      "pytest_returncode": 1,
+      "pytest_output": "............F\n=================================== FAILURES ===================================\n___________________ test_missing_field_is_rejected[coloring] ___________________\ntests/test_witness.py:35: in test_missing_field_is_rejected\n    assert not verify_witness.check_witness(doc)[0]\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nrado/verify_witness.py:70: in check_witness\n    n, N, coloring = doc['n'], doc['N'], doc['coloring']\n                                         ^^^^^^^^^^^^^^^\nE   KeyError: 'coloring'\n=========================== short test summary info ============================\nFAILED tests/test_witness.py::test_missing_field_is_rejected[coloring] - KeyE...\n!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!\n1 failed, 12 passed in 2.21s\n",
+      "killed_after": true,
+      "pytest_command": [
+        "-m",
+        "pytest",
+        "-q",
+        "-x",
+        "--tb=short",
+        "tests/test_witness.py"
+      ]
+    },
+    {
+      "module": "rado/verify_witness.py",
+      "name": "dp-count",
+      "line": 44,
+      "old": "for _ in range(n):",
+      "new": "for _ in range(n - 1):",
+      "killed_before": true,
+      "gate_returncode": 1,
+      "linter_regressions": [],
+      "pytest_command": [
+        "-m",
+        "pytest",
+        "-q",
+        "-x",
+        "--tb=short",
+        "tests/test_witness.py"
+      ],
+      "pytest_returncode": 1,
+      "pytest_output": "F\n=================================== FAILURES ===================================\n______________________ test_one_changed_color_is_rejected ______________________\ntests/test_witness.py:17: in test_one_changed_color_is_rejected\n    assert verify_witness.check_witness(witness())[0]\nE   assert False\n=========================== short test summary info ============================\nFAILED tests/test_witness.py::test_one_changed_color_is_rejected - assert False\n!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!\n1 failed in 1.78s\n",
+      "killed_after": true
+    },
+    {
+      "module": "rado/verify_witness.py",
+      "name": "color-1-only",
+      "line": 36,
+      "old": "for color in '01':",
+      "new": "for color in '1':",
+      "killed_before": true,
+      "gate_returncode": 1,
+      "linter_regressions": [],
+      "pytest_command": [
+        "-m",
+        "pytest",
+        "-q",
+        "-x",
+        "--tb=short",
+        "tests/test_witness.py"
+      ],
+      "pytest_returncode": 1,
+      "pytest_output": ".............F\n=================================== FAILURES ===================================\n________ test_dp_matches_arithmetic_for_every_small_coloring[True-1-1] _________\ntests/test_witness.py:50: in test_dp_matches_arithmetic_for_every_small_coloring\n    assert hit in hits, (n, coloring, z_colored)\nE   AssertionError: (1, '0', True)\nE   assert None in {('0', 1)}\n=========================== short test summary info ============================\nFAILED tests/test_witness.py::test_dp_matches_arithmetic_for_every_small_coloring[True-1-1]\n!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!\n1 failed, 13 passed in 3.75s\n",
+      "killed_after": true
+    },
+    {
+      "module": "rado/lazy.py",
+      "name": "zero-count",
+      "line": 138,
+      "old": "count < 1 or not",
+      "new": "count < 0 or not",
+      "killed_before": false,
+      "gate_returncode": 0,
+      "linter_regressions": [],
+      "pytest_command": [
+        "-m",
+        "pytest",
+        "-q",
+        "-x",
+        "--tb=short",
+        "tests/test_lazy.py"
+      ],
+      "pytest_returncode": 1,
+      "pytest_output": ".....F\n=================================== FAILURES ===================================\n____________ test_corrupted_justification_is_rejected[pairs4-3-9-3] ____________\ntests/test_lazy.py:31: in test_corrupted_justification_is_rejected\n    assert not lazy.check_justification(pairs, z, n, N)\nE   assert not True\nE    +  where True = <function check_justification at 0x701595dcbe20>([[1, 9], [2, 0]], 3, 9, 3)\nE    +    where <function check_justification at 0x701595dcbe20> = lazy.check_justification\n=========================== short test summary info ============================\nFAILED tests/test_lazy.py::test_corrupted_justification_is_rejected[pairs4-3-9-3]\n!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!\n1 failed, 5 passed in 1.47s\n",
+      "killed_after": true
+    },
+    {
+      "module": "rado/lazy.py",
+      "name": "zero-value",
+      "line": 138,
+      "old": "not 1 <= v <= N",
+      "new": "not 0 <= v <= N",
+      "killed_before": false,
+      "gate_returncode": 0,
+      "linter_regressions": [],
+      "pytest_command": [
+        "-m",
+        "pytest",
+        "-q",
+        "-x",
+        "--tb=short",
+        "tests/test_lazy.py"
+      ],
+      "pytest_returncode": 1,
+      "pytest_output": "......F\n=================================== FAILURES ===================================\n___________ test_corrupted_justification_is_rejected[pairs5-3-10-3] ____________\ntests/test_lazy.py:31: in test_corrupted_justification_is_rejected\n    assert not lazy.check_justification(pairs, z, n, N)\nE   assert not True\nE    +  where True = <function check_justification at 0x72bb5a01bec0>([[0, 1], [1, 9]], 3, 10, 3)\nE    +    where <function check_justification at 0x72bb5a01bec0> = lazy.check_justification\n=========================== short test summary info ============================\nFAILED tests/test_lazy.py::test_corrupted_justification_is_rejected[pairs5-3-10-3]\n!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!\n1 failed, 6 passed in 2.53s\n",
+      "killed_after": true
+    },
+    {
+      "module": "rado/lazy.py",
+      "name": "z-upper-bound",
+      "line": 136,
+      "old": "not 1 <= z <= N:",
+      "new": "not 1 <= z <= N + 1:",
+      "killed_before": false,
+      "gate_returncode": 0,
+      "linter_regressions": [],
+      "pytest_command": [
+        "-m",
+        "pytest",
+        "-q",
+        "-x",
+        "--tb=short",
+        "tests/test_lazy.py"
+      ],
+      "pytest_returncode": 1,
+      "pytest_output": ".......F\n=================================== FAILURES ===================================\n____________ test_corrupted_justification_is_rejected[pairs6-3-9-2] ____________\ntests/test_lazy.py:31: in test_corrupted_justification_is_rejected\n    assert not lazy.check_justification(pairs, z, n, N)\nE   assert not True\nE    +  where True = <function check_justification at 0x7a4a951bbec0>([[1, 9]], 3, 9, 2)\nE    +    where <function check_justification at 0x7a4a951bbec0> = lazy.check_justification\n=========================== short test summary info ============================\nFAILED tests/test_lazy.py::test_corrupted_justification_is_rejected[pairs6-3-9-2]\n!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!\n1 failed, 7 passed in 5.67s\n",
+      "killed_after": true
+    },
+    {
+      "module": "rado/lazy.py",
+      "name": "z-type",
+      "line": 133,
+      "old": "if not is_int(z) or not all",
+      "new": "if not all",
+      "killed_before": false,
+      "gate_returncode": 0,
+      "linter_regressions": [],
+      "pytest_command": [
+        "-m",
+        "pytest",
+        "-q",
+        "-x",
+        "--tb=short",
+        "tests/test_lazy.py"
+      ],
+      "pytest_returncode": 1,
+      "pytest_output": "........F\n=================================== FAILURES ===================================\n___________ test_corrupted_justification_is_rejected[pairs7-3.0-9-3] ___________\ntests/test_lazy.py:31: in test_corrupted_justification_is_rejected\n    assert not lazy.check_justification(pairs, z, n, N)\nE   assert not True\nE    +  where True = <function check_justification at 0x7d742824fec0>([[1, 9]], 3.0, 9, 3)\nE    +    where <function check_justification at 0x7d742824fec0> = lazy.check_justification\n=========================== short test summary info ============================\nFAILED tests/test_lazy.py::test_corrupted_justification_is_rejected[pairs7-3.0-9-3]\n!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!\n1 failed, 8 passed in 5.16s\n",
+      "killed_after": true
+    },
+    {
+      "module": "rado/lazy.py",
+      "name": "boolean-integer",
+      "line": 131,
+      "old": "type(v) is int",
+      "new": "isinstance(v, int)",
+      "killed_before": true,
+      "gate_returncode": 1,
+      "linter_regressions": [],
+      "pytest_command": [
+        "-m",
+        "pytest",
+        "-q",
+        "-x",
+        "--tb=short",
+        "tests/test_lazy.py"
+      ],
+      "pytest_returncode": 1,
+      "pytest_output": "..........F\n=================================== FAILURES ===================================\n____________ test_corrupted_justification_is_rejected[pairs9-3-9-3] ____________\ntests/test_lazy.py:31: in test_corrupted_justification_is_rejected\n    assert not lazy.check_justification(pairs, z, n, N)\nE   assert not True\nE    +  where True = <function check_justification at 0x7fbe090b3ec0>([[True, 9]], 3, 9, 3)\nE    +    where <function check_justification at 0x7fbe090b3ec0> = lazy.check_justification\n=========================== short test summary info ============================\nFAILED tests/test_lazy.py::test_corrupted_justification_is_rejected[pairs9-3-9-3]\n!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!\n1 failed, 10 passed in 6.05s\n",
+      "killed_after": true
+    },
+    {
+      "module": "rado/lazy.py",
+      "name": "wrong-count",
+      "line": 140,
+      "old": "pairs) != n:",
+      "new": "pairs) == n:",
+      "killed_before": true,
+      "gate_returncode": 1,
+      "linter_regressions": [],
+      "pytest_command": [
+        "-m",
+        "pytest",
+        "-q",
+        "-x",
+        "--tb=short",
+        "tests/test_lazy.py"
+      ],
+      "pytest_returncode": 1,
+      "pytest_output": "F\n=================================== FAILURES ===================================\n_________ test_justification_accepts_repetition_and_interval_endpoints _________\ntests/test_lazy.py:11: in test_justification_accepts_repetition_and_interval_endpoints\n    assert lazy.check_justification([[1, 9]], 3, 9, 3)\nE   assert False\nE    +  where False = <function check_justification at 0x7a1c9b50fec0>([[1, 9]], 3, 9, 3)\nE    +    where <function check_justification at 0x7a1c9b50fec0> = lazy.check_justification\n=========================== short test summary info ============================\nFAILED tests/test_lazy.py::test_justification_accepts_repetition_and_interval_endpoints\n!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!\n1 failed in 7.22s\n",
+      "killed_after": true
+    },
+    {
+      "module": "rado/lazy.py",
+      "name": "wrong-squares",
+      "line": 142,
+      "old": "pairs) == z * z",
+      "new": "pairs) != z * z",
+      "killed_before": true,
+      "gate_returncode": 1,
+      "linter_regressions": [],
+      "pytest_command": [
+        "-m",
+        "pytest",
+        "-q",
+        "-x",
+        "--tb=short",
+        "tests/test_lazy.py"
+      ],
+      "pytest_returncode": 1,
+      "pytest_output": "F\n=================================== FAILURES ===================================\n_________ test_justification_accepts_repetition_and_interval_endpoints _________\ntests/test_lazy.py:11: in test_justification_accepts_repetition_and_interval_endpoints\n    assert lazy.check_justification([[1, 9]], 3, 9, 3)\nE   assert False\nE    +  where False = <function check_justification at 0x73e91a36bec0>([[1, 9]], 3, 9, 3)\nE    +    where <function check_justification at 0x73e91a36bec0> = lazy.check_justification\n=========================== short test summary info ============================\nFAILED tests/test_lazy.py::test_justification_accepts_repetition_and_interval_endpoints\n!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!\n1 failed in 5.41s\n",
+      "killed_after": true
+    },
+    {
+      "module": "rado/lazy.py",
+      "name": "reconstruct-count",
+      "line": 79,
+      "old": "for _ in range(n):",
+      "new": "for _ in range(n - 1):",
+      "killed_before": false,
+      "gate_returncode": 0,
+      "linter_regressions": [],
+      "pytest_command": [
+        "-m",
+        "pytest",
+        "-q",
+        "-x",
+        "--tb=short",
+        "tests/test_lazy.py"
+      ],
+      "pytest_returncode": 1,
+      "pytest_output": "..............F\n=================================== FAILURES ===================================\n_______________ test_reconstruction_matches_arithmetic[True-1-1] _______________\ntests/test_lazy.py:46: in test_reconstruction_matches_arithmetic\n    color, xs, z = hit\n    ^^^^^^^^^^^^\nE   TypeError: cannot unpack non-iterable NoneType object\n=========================== short test summary info ============================\nFAILED tests/test_lazy.py::test_reconstruction_matches_arithmetic[True-1-1]\n!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!\n1 failed, 14 passed in 2.90s\n",
+      "killed_after": true
+    },
+    {
+      "module": "rado/lazy.py",
+      "name": "multiset-count",
+      "line": 115,
+      "old": "counts.get(v, 0) + 1",
+      "new": "counts.get(v, 0) - 1",
+      "killed_before": false,
+      "gate_returncode": 0,
+      "linter_regressions": [],
+      "pytest_command": [
+        "-m",
+        "pytest",
+        "-q",
+        "-x",
+        "--tb=short",
+        "tests/test_lazy.py"
+      ],
+      "pytest_returncode": 1,
+      "pytest_output": "......................F\n=================================== FAILURES ===================================\n__________________ test_multiset_counts_are_sorted_and_exact ___________________\ntests/test_lazy.py:54: in test_multiset_counts_are_sorted_and_exact\n    assert lazy.as_multiset([5, 3, 5, 1, 3, 5]) == [[1, 1], [3, 2], [5, 3]]\nE   assert [[1, -1], [3, -2], [5, -3]] == [[1, 1], [3, 2], [5, 3]]\nE     \nE     At index 0 diff: [1, -1] != [1, 1]\nE     Use -v to get more diff\n=========================== short test summary info ============================\nFAILED tests/test_lazy.py::test_multiset_counts_are_sorted_and_exact - assert...\n!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!\n1 failed, 22 passed in 2.58s\n",
+      "killed_after": true
+    },
+    {
+      "module": "rado/lazy.py",
+      "name": "clause-polarity",
+      "line": 152,
+      "old": "str(-v) for v in s",
+      "new": "str(v) for v in s",
+      "killed_before": false,
+      "gate_returncode": 0,
+      "linter_regressions": [],
+      "pytest_command": [
+        "-m",
+        "pytest",
+        "-q",
+        "-x",
+        "--tb=short",
+        "tests/test_lazy.py"
+      ],
+      "pytest_returncode": 1,
+      "pytest_output": ".......................F\n=================================== FAILURES ===================================\n__________________________ test_clause_pair_and_count __________________________\ntests/test_lazy.py:61: in test_clause_pair_and_count\n    assert path.read_text().splitlines() == [\nE   AssertionError: assert ['p cnf 5 4',...3 0', '1 3 0'] == ['p cnf 5 4',...0', '-1 -3 0']\nE     \nE     At index 2 diff: '3 4 5 0' != '-3 -4 -5 0'\nE     Use -v to get more diff\n=========================== short test summary info ============================\nFAILED tests/test_lazy.py::test_clause_pair_and_count - AssertionError: asser...\n!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!\n1 failed, 23 passed in 3.73s\n",
+      "killed_after": true
+    },
+    {
+      "module": "rado/lazy.py",
+      "name": "bisect-boundary",
+      "line": 250,
+      "old": "while hi - lo > 1:",
+      "new": "while hi - lo > 2:",
+      "killed_before": false,
+      "gate_returncode": 0,
+      "linter_regressions": [],
+      "pytest_command": [
+        "-m",
+        "pytest",
+        "-q",
+        "-x",
+        "--tb=short",
+        "tests/test_lazy.py"
+      ],
+      "pytest_returncode": 1,
+      "pytest_output": "..........................F\n=================================== FAILURES ===================================\n_______________ test_bisect_finds_first_unsat_without_solver[4] ________________\ntests/test_lazy.py:77: in test_bisect_finds_first_unsat_without_solver\n    assert result == (threshold if threshold <= 9 else None)\nE   assert 5 == 4\n=========================== short test summary info ============================\nFAILED tests/test_lazy.py::test_bisect_finds_first_unsat_without_solver[4] - ...\n!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!\n1 failed, 26 passed in 5.49s\n",
+      "killed_after": true
+    },
+    {
+      "module": "rado/lazy.py",
+      "name": "bisect-polarity",
+      "line": 244,
+      "old": "cache[N]['sat'] is False",
+      "new": "cache[N]['sat'] is True",
+      "killed_before": false,
+      "gate_returncode": 0,
+      "linter_regressions": [],
+      "pytest_command": [
+        "-m",
+        "pytest",
+        "-q",
+        "-x",
+        "--tb=short",
+        "tests/test_lazy.py"
+      ],
+      "pytest_returncode": 1,
+      "pytest_output": "........................F\n=================================== FAILURES ===================================\n_______________ test_bisect_finds_first_unsat_without_solver[2] ________________\ntests/test_lazy.py:77: in test_bisect_finds_first_unsat_without_solver\n    assert result == (threshold if threshold <= 9 else None)\nE   assert None == 2\n=========================== short test summary info ============================\nFAILED tests/test_lazy.py::test_bisect_finds_first_unsat_without_solver[2] - ...\n!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!\n1 failed, 24 passed in 5.23s\n",
+      "killed_after": true
+    },
+    {
+      "module": "rado/encode.py",
+      "name": "support-boundary",
+      "line": 67,
+      "old": "if t * v2 > target:",
+      "new": "if t * v2 >= target:",
+      "killed_before": true,
+      "gate_returncode": 1,
+      "linter_regressions": [],
+      "pytest_command": [
+        "-m",
+        "pytest",
+        "-q",
+        "-x",
+        "--tb=short",
+        "tests/test_encode.py"
+      ],
+      "pytest_returncode": 1,
+      "pytest_output": "..F\n=================================== FAILURES ===================================\n_______________ test_supports_equal_arithmetic[False-False-4-7] ________________\ntests/test_encode.py:16: in test_supports_equal_arithmetic\n    assert set(actual) == expected\nE   assert {frozenset({1...et({1, 2, 4})} == {frozenset({1...set({3}), ...}\nE     \nE     Extra items in the right set:\nE     frozenset({3})\nE     frozenset({2})\nE     frozenset({1})\nE     Use -v to get more diff\n=========================== short test summary info ============================\nFAILED tests/test_encode.py::test_supports_equal_arithmetic[False-False-4-7]\n!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!\n1 failed, 2 passed in 5.97s\n",
+      "killed_after": true
+    },
+    {
+      "module": "rado/encode.py",
+      "name": "distinct-boundary",
+      "line": 130,
+      "old": "if v < k:",
+      "new": "if v <= k:",
+      "killed_before": false,
+      "gate_returncode": 0,
+      "linter_regressions": [],
+      "pytest_command": [
+        "-m",
+        "pytest",
+        "-q",
+        "-x",
+        "--tb=short",
+        "tests/test_encode.py"
+      ],
+      "pytest_returncode": 1,
+      "pytest_output": ".....F\n=================================== FAILURES ===================================\n________________ test_supports_equal_arithmetic[False-True-3-9] ________________\ntests/test_encode.py:16: in test_supports_equal_arithmetic\n    assert set(actual) == expected\nE   assert {frozenset({2, 3, 6})} == {frozenset({1...et({2, 3, 6})}\nE     \nE     Extra items in the right set:\nE     frozenset({1, 4, 8})\nE     Use -v to get more diff\n=========================== short test summary info ============================\nFAILED tests/test_encode.py::test_supports_equal_arithmetic[False-True-3-9]\n!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!\n1 failed, 5 passed in 5.06s\n",
+      "killed_after": true
+    },
+    {
+      "module": "rado/encode.py",
+      "name": "reach-target",
+      "line": 200,
+      "old": "if z * z >= n and",
+      "new": "if z * z > n and",
+      "killed_before": false,
+      "gate_returncode": 0,
+      "linter_regressions": [],
+      "pytest_command": [
+        "-m",
+        "pytest",
+        "-q",
+        "-x",
+        "--tb=short",
+        "tests/test_encode.py"
+      ],
+      "pytest_returncode": 1,
+      "pytest_output": "................F\n=================================== FAILURES ===================================\n____________ test_reach_circuit_for_every_small_coloring[True-1-1] _____________\ntests/test_encode.py:56: in test_reach_circuit_for_every_small_coloring\n    assert propagates_without_conflict(clauses, colors) is not bad, colors\nE   AssertionError: (False,)\nE   assert True is not True\nE    +  where True = propagates_without_conflict([], (False,))\n=========================== short test summary info ============================\nFAILED tests/test_encode.py::test_reach_circuit_for_every_small_coloring[True-1-1]\n!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!\n1 failed, 16 passed in 5.52s\n",
+      "killed_after": true
+    },
+    {
+      "module": "rado/encode.py",
+      "name": "reach-premise",
+      "line": 240,
+      "old": "(-s * v, -pre, r)",
+      "new": "(-s * v, pre, r)",
+      "killed_before": false,
+      "gate_returncode": 0,
+      "linter_regressions": [],
+      "pytest_command": [
+        "-m",
+        "pytest",
+        "-q",
+        "-x",
+        "--tb=short",
+        "tests/test_encode.py"
+      ],
+      "pytest_returncode": 1,
+      "pytest_output": ".................F\n=================================== FAILURES ===================================\n____________ test_reach_circuit_for_every_small_coloring[True-2-5] _____________\ntests/test_encode.py:56: in test_reach_circuit_for_every_small_coloring\n    assert propagates_without_conflict(clauses, colors) is not bad, colors\nE   AssertionError: (False, False, False, False, False)\nE   assert True is not True\nE    +  where True = propagates_without_conflict([(-3, 6), (-4, 7), (-3, 7, 8), (-4, 6, 8), (-5, -8), (3, 9), ...], (False, False, False, False, False))\n=========================== short test summary info ============================\nFAILED tests/test_encode.py::test_reach_circuit_for_every_small_coloring[True-2-5]\n!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!\n1 failed, 17 passed in 2.17s\n",
+      "killed_after": true
+    },
+    {
+      "module": "rado/encode.py",
+      "name": "reach-z-polarity",
+      "line": 245,
+      "old": "(-s * z, -r)",
+      "new": "(s * z, -r)",
+      "killed_before": false,
+      "gate_returncode": 0,
+      "linter_regressions": [],
+      "pytest_command": [
+        "-m",
+        "pytest",
+        "-q",
+        "-x",
+        "--tb=short",
+        "tests/test_encode.py"
+      ],
+      "pytest_returncode": 1,
+      "pytest_output": "................F\n=================================== FAILURES ===================================\n____________ test_reach_circuit_for_every_small_coloring[True-1-1] _____________\ntests/test_encode.py:56: in test_reach_circuit_for_every_small_coloring\n    assert propagates_without_conflict(clauses, colors) is not bad, colors\nE   AssertionError: (False,)\nE   assert True is not True\nE    +  where True = propagates_without_conflict([(-1, 2), (1, -2), (1, 3), (-1, -3)], (False,))\n=========================== short test summary info ============================\nFAILED tests/test_encode.py::test_reach_circuit_for_every_small_coloring[True-1-1]\n!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!\n1 failed, 16 passed in 2.72s\n",
+      "killed_after": true
+    },
+    {
+      "module": "rado/encode.py",
+      "name": "support-polarity",
+      "line": 258,
+      "old": "neg = tuple(-v for v in sup)",
+      "new": "neg = tuple(v for v in sup)",
+      "killed_before": false,
+      "gate_returncode": 0,
+      "linter_regressions": [],
+      "pytest_command": [
+        "-m",
+        "pytest",
+        "-q",
+        "-x",
+        "--tb=short",
+        "tests/test_encode.py"
+      ],
+      "pytest_returncode": 1,
+      "pytest_output": "........................F\n=================================== FAILURES ===================================\n____________ test_dimacs_header_and_both_clause_polarities[support] ____________\ntests/test_encode.py:75: in test_dimacs_header_and_both_clause_polarities\n    assert {frozenset(c) for c in clauses} == {\nE   assert {frozenset({3, 4, 5})} == {frozenset({-...et({3, 4, 5})}\nE     \nE     Extra items in the right set:\nE     frozenset({-5, -4, -3})\nE     Use -v to get more diff\n=========================== short test summary info ============================\nFAILED tests/test_encode.py::test_dimacs_header_and_both_clause_polarities[support]\n!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!\n1 failed, 24 passed in 4.64s\n",
+      "killed_after": true
+    },
+    {
+      "module": "rado/encode.py",
+      "name": "dimacs-count",
+      "line": 291,
+      "old": "f'p cnf {N} {2 * nsup}\\n'",
+      "new": "f'p cnf {N} {2 * nsup + 1}\\n'",
+      "killed_before": false,
+      "gate_returncode": 0,
+      "linter_regressions": [],
+      "pytest_command": [
+        "-m",
+        "pytest",
+        "-q",
+        "-x",
+        "--tb=short",
+        "tests/test_encode.py"
+      ],
+      "pytest_returncode": 1,
+      "pytest_output": "........................F\n=================================== FAILURES ===================================\n____________ test_dimacs_header_and_both_clause_polarities[support] ____________\ntests/test_encode.py:65: in test_dimacs_header_and_both_clause_polarities\n    assert header == f'p cnf {nv} {nc}'\nE   AssertionError: assert 'p cnf 5 3' == 'p cnf 5 2'\nE     \nE     - p cnf 5 2\nE     ?         ^\nE     + p cnf 5 3\nE     ?         ^\n=========================== short test summary info ============================\nFAILED tests/test_encode.py::test_dimacs_header_and_both_clause_polarities[support]\n!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!\n1 failed, 24 passed in 3.01s\n",
+      "killed_after": true
+    },
+    {
+      "module": "rado/encode.py",
+      "name": "drop-clause",
+      "line": 283,
+      "old": "chunk.append(' '.join(map(str, neg)) + ' 0')",
+      "new": "pass",
+      "killed_before": false,
+      "gate_returncode": 0,
+      "linter_regressions": [],
+      "pytest_command": [
+        "-m",
+        "pytest",
+        "-q",
+        "-x",
+        "--tb=short",
+        "tests/test_encode.py"
+      ],
+      "pytest_returncode": 1,
+      "pytest_output": "........................F\n=================================== FAILURES ===================================\n____________ test_dimacs_header_and_both_clause_polarities[support] ____________\ntests/test_encode.py:66: in test_dimacs_header_and_both_clause_polarities\n    assert len(body) == nc\nE   AssertionError: assert 1 == 2\nE    +  where 1 = len(['4 3 5 0'])\n=========================== short test summary info ============================\nFAILED tests/test_encode.py::test_dimacs_header_and_both_clause_polarities[support]\n!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!\n1 failed, 24 passed in 1.66s\n",
+      "killed_after": true
+    },
+    {
+      "module": "rado/brute_force.py",
+      "name": "mask-index",
+      "line": 37,
+      "old": "m |= 1 << (v - 1)",
+      "new": "m |= 1 << v",
+      "killed_before": true,
+      "gate_returncode": 1,
+      "linter_regressions": [],
+      "pytest_command": [
+        "-m",
+        "pytest",
+        "-q",
+        "-x",
+        "--tb=short",
+        "tests/test_brute_force.py"
+      ],
+      "pytest_returncode": 1,
+      "pytest_output": "F\n=================================== FAILURES ===================================\n________________ test_support_masks_use_the_value_minus_one_bit ________________\ntests/test_brute_force.py:7: in test_support_masks_use_the_value_minus_one_bit\n    assert brute_force.support_masks(2, 5) == [0b11100]\nE   assert [56] == [28]\nE     \nE     At index 0 diff: 56 != 28\nE     Use -v to get more diff\n=========================== short test summary info ============================\nFAILED tests/test_brute_force.py::test_support_masks_use_the_value_minus_one_bit\n!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!\n1 failed in 3.38s\n",
+      "killed_after": true
+    },
+    {
+      "module": "rado/brute_force.py",
+      "name": "monochromatic-or",
+      "line": 60,
+      "old": "if x == m or x == 0:",
+      "new": "if x == m and x == 0:",
+      "killed_before": true,
+      "gate_returncode": 1,
+      "linter_regressions": [],
+      "pytest_command": [
+        "-m",
+        "pytest",
+        "-q",
+        "-x",
+        "--tb=short",
+        "tests/test_brute_force.py"
+      ],
+      "pytest_returncode": 1,
+      "pytest_output": ".F\n=================================== FAILURES ===================================\n________________ test_small_sat_witness_and_exact_checked_count ________________\ntests/test_brute_force.py:13: in test_small_sat_witness_and_exact_checked_count\n    assert brute_force.brute_sat(2, 5, cross_check=True) == (True, '00100', 5)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nrado/brute_force.py:67: in brute_sat\n    assert verify_witness.mono_solution_exists(\nE   AssertionError: mask check and DP checker disagree on a witness\n=========================== short test summary info ============================\nFAILED tests/test_brute_force.py::test_small_sat_witness_and_exact_checked_count\n!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!\n1 failed, 1 passed in 3.46s\n",
+      "killed_after": true
+    },
+    {
+      "module": "rado/brute_force.py",
+      "name": "checked-count",
+      "line": 70,
+      "old": "return True, witness, c + 1",
+      "new": "return True, witness, c",
+      "killed_before": false,
+      "gate_returncode": 0,
+      "linter_regressions": [],
+      "pytest_command": [
+        "-m",
+        "pytest",
+        "-q",
+        "-x",
+        "--tb=short",
+        "tests/test_brute_force.py"
+      ],
+      "pytest_returncode": 1,
+      "pytest_output": ".F\n=================================== FAILURES ===================================\n________________ test_small_sat_witness_and_exact_checked_count ________________\ntests/test_brute_force.py:13: in test_small_sat_witness_and_exact_checked_count\n    assert brute_force.brute_sat(2, 5, cross_check=True) == (True, '00100', 5)\nE   AssertionError: assert (True, '00100', 4) == (True, '00100', 5)\nE     \nE     At index 2 diff: 4 != 5\nE     Use -v to get more diff\n=========================== short test summary info ============================\nFAILED tests/test_brute_force.py::test_small_sat_witness_and_exact_checked_count\n!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!\n1 failed, 1 passed in 5.53s\n",
+      "killed_after": true
+    },
+    {
+      "module": "rado/brute_force.py",
+      "name": "budget-direction",
+      "line": 55,
+      "old": "time.time() - t0 > budget_s",
+      "new": "time.time() - t0 < budget_s",
+      "killed_before": false,
+      "gate_returncode": 0,
+      "linter_regressions": [],
+      "pytest_command": [
+        "-m",
+        "pytest",
+        "-q",
+        "-x",
+        "--tb=short",
+        "tests/test_brute_force.py"
+      ],
+      "pytest_returncode": 1,
+      "pytest_output": "...F\n=================================== FAILURES ===================================\n__________________ test_budget_expiry_is_not_an_unsat_result ___________________\ntests/test_brute_force.py:24: in test_budget_expiry_is_not_an_unsat_result\n    with pytest.raises(TimeoutError, match='budget exceeded'):\nE   Failed: DID NOT RAISE <class 'TimeoutError'>\n=========================== short test summary info ============================\nFAILED tests/test_brute_force.py::test_budget_expiry_is_not_an_unsat_result\n!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!\n1 failed, 3 passed in 5.34s\n",
+      "killed_after": true
+    },
+    {
+      "module": "rado/solve.py",
+      "name": "model-sign",
+      "line": 52,
+      "old": "val[abs(lit)] = lit > 0",
+      "new": "val[abs(lit)] = lit < 0",
+      "killed_before": false,
+      "gate_returncode": 0,
+      "linter_regressions": [],
+      "pytest_command": [
+        "-m",
+        "pytest",
+        "-q",
+        "-x",
+        "--tb=short",
+        "tests/test_solve.py"
+      ],
+      "pytest_returncode": 1,
+      "pytest_output": "F\n=================================== FAILURES ===================================\n_________ test_model_parser_handles_lines_zeros_signs_and_auxiliaries __________\ntests/test_solve.py:10: in test_model_parser_handles_lines_zeros_signs_and_auxiliaries\n    assert solve.parse_model(text, 5) == '00110'\nE   AssertionError: assert '11001' == '00110'\nE     \nE     - 00110\nE     + 11001\n=========================== short test summary info ============================\nFAILED tests/test_solve.py::test_model_parser_handles_lines_zeros_signs_and_auxiliaries\n!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!\n1 failed in 4.52s\n",
+      "killed_after": true
+    },
+    {
+      "module": "rado/solve.py",
+      "name": "missing-model",
+      "line": 54,
+      "old": "if missing:",
+      "new": "if False:",
+      "killed_before": false,
+      "gate_returncode": 0,
+      "linter_regressions": [],
+      "pytest_command": [
+        "-m",
+        "pytest",
+        "-q",
+        "-x",
+        "--tb=short",
+        "tests/test_solve.py"
+      ],
+      "pytest_returncode": 1,
+      "pytest_output": ".F\n=================================== FAILURES ===================================\n________ test_truncated_model_cannot_supply_a_witness[s SATISFIABLE\\n] _________\ntests/test_solve.py:17: in test_truncated_model_cannot_supply_a_witness\n    solve.parse_model(text, 5)\nrado/solve.py:56: in parse_model\n    return ''.join('1' if val[i] else '0' for i in range(1, N + 1))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nrado/solve.py:56: in <genexpr>\n    return ''.join('1' if val[i] else '0' for i in range(1, N + 1))\n                          ^^^^^^\nE   KeyError: 1\n=========================== short test summary info ============================\nFAILED tests/test_solve.py::test_truncated_model_cannot_supply_a_witness[s SATISFIABLE\\n]\n!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!\n1 failed, 1 passed in 6.56s\n",
+      "killed_after": true
+    },
+    {
+      "module": "rado/solve.py",
+      "name": "model-length",
+      "line": 56,
+      "old": "for i in range(1, N + 1))",
+      "new": "for i in range(1, N))",
+      "killed_before": false,
+      "gate_returncode": 0,
+      "linter_regressions": [],
+      "pytest_command": [
+        "-m",
+        "pytest",
+        "-q",
+        "-x",
+        "--tb=short",
+        "tests/test_solve.py"
+      ],
+      "pytest_returncode": 1,
+      "pytest_output": "F\n=================================== FAILURES ===================================\n_________ test_model_parser_handles_lines_zeros_signs_and_auxiliaries __________\ntests/test_solve.py:10: in test_model_parser_handles_lines_zeros_signs_and_auxiliaries\n    assert solve.parse_model(text, 5) == '00110'\nE   AssertionError: assert '0011' == '00110'\nE     \nE     - 00110\nE     ?     -\nE     + 0011\n=========================== short test summary info ============================\nFAILED tests/test_solve.py::test_model_parser_handles_lines_zeros_signs_and_auxiliaries\n!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!\n1 failed in 5.07s\n",
+      "killed_after": true
+    },
+    {
+      "module": "rado/solve.py",
+      "name": "accept-bad-witness",
+      "line": 100,
+      "old": "if ok else 'WITNESS_REJECTED'",
+      "new": "if True else 'WITNESS_REJECTED'",
+      "killed_before": false,
+      "gate_returncode": 0,
+      "linter_regressions": [],
+      "pytest_command": [
+        "-m",
+        "pytest",
+        "-q",
+        "-x",
+        "--tb=short",
+        "tests/test_solve.py"
+      ],
+      "pytest_returncode": 1,
+      "pytest_output": ".....F\n=================================== FAILURES ===================================\n_ test_solver_result_requires_exit_code_and_checked_witness[10-v -1 -2 3 4 5 0\\n-WITNESS_REJECTED-True] _\ntests/test_solve.py:37: in test_solver_result_requires_exit_code_and_checked_witness\n    assert rec['verdict'] == verdict\nE   AssertionError: assert 'SAT_WITNESS_VERIFIED' == 'WITNESS_REJECTED'\nE     \nE     - WITNESS_REJECTED\nE     + SAT_WITNESS_VERIFIED\n=========================== short test summary info ============================\nFAILED tests/test_solve.py::test_solver_result_requires_exit_code_and_checked_witness[10-v -1 -2 3 4 5 0\\n-WITNESS_REJECTED-True]\n!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!\n1 failed, 5 passed in 6.30s\n",
+      "killed_after": true
+    },
+    {
+      "module": "rado/solve.py",
+      "name": "unsat-exit",
+      "line": 101,
+      "old": "elif r.returncode == 20:",
+      "new": "elif r.returncode == 0:",
+      "killed_before": false,
+      "gate_returncode": 0,
+      "linter_regressions": [],
+      "pytest_command": [
+        "-m",
+        "pytest",
+        "-q",
+        "-x",
+        "--tb=short",
+        "tests/test_solve.py"
+      ],
+      "pytest_returncode": 1,
+      "pytest_output": "......F\n=================================== FAILURES ===================================\n__ test_solver_result_requires_exit_code_and_checked_witness[20--UNSAT-False] __\ntests/test_solve.py:37: in test_solver_result_requires_exit_code_and_checked_witness\n    assert rec['verdict'] == verdict\nE   AssertionError: assert 'SOLVER_ERROR' == 'UNSAT'\nE     \nE     - UNSAT\nE     + SOLVER_ERROR\n=========================== short test summary info ============================\nFAILED tests/test_solve.py::test_solver_result_requires_exit_code_and_checked_witness[20--UNSAT-False]\n!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!\n1 failed, 6 passed in 5.73s\n",
+      "killed_after": true
+    },
+    {
+      "module": "rado/drat_certify.py",
+      "name": "skip-arithmetic",
+      "line": 92,
+      "old": "if not lazy.check_justification(pairs, z, n, N):",
+      "new": "if False:",
+      "killed_before": false,
+      "gate_returncode": 0,
+      "linter_regressions": [],
+      "pytest_command": [
+        "-m",
+        "pytest",
+        "-q",
+        "-x",
+        "--tb=short",
+        "tests/test_certificates.py"
+      ],
+      "pytest_returncode": 1,
+      "pytest_output": ".F\n=================================== FAILURES ===================================\n_______________ test_corrupt_formula_never_reaches_replay[value] _______________\ntests/test_certificates.py:46: in test_corrupt_formula_never_reaches_replay\n    rec = drat_certify.certify(9, 3, 'lazy', {}, str(tmp_path))\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nrado/drat_certify.py:124: in certify\n    [tools['kissat'], '-q', '--no-binary', formula, proof],\n     ^^^^^^^^^^^^^^^\nE   KeyError: 'kissat'\n=========================== short test summary info ============================\nFAILED tests/test_certificates.py::test_corrupt_formula_never_reaches_replay[value]\n!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!\n1 failed, 1 passed in 2.76s\n",
+      "killed_after": true
+    },
+    {
+      "module": "rado/drat_certify.py",
+      "name": "support-comparison",
+      "line": 96,
+      "old": "if derived != sorted(j['support']):",
+      "new": "if derived == sorted(j['support']):",
+      "killed_before": false,
+      "gate_returncode": 0,
+      "linter_regressions": [],
+      "pytest_command": [
+        "-m",
+        "pytest",
+        "-q",
+        "-x",
+        "--tb=short",
+        "tests/test_certificates.py"
+      ],
+      "pytest_returncode": 1,
+      "pytest_output": "F\n=================================== FAILURES ===================================\n_______________ test_formula_is_rebuilt_from_checked_arithmetic ________________\ntests/test_certificates.py:24: in test_formula_is_rebuilt_from_checked_arithmetic\n    assert drat_certify.rebuild_lazy_formula(path, 9, 3) == (3, 2, 1, [])\nE   AssertionError: assert (3, 2, 1, ['x...] != [1, 3]']) == (3, 2, 1, [])\nE     \nE     At index 3 diff: ['x=[[1, 9]] z=3: support [1, 3] != [1, 3]'] != []\nE     Use -v to get more diff\n=========================== short test summary info ============================\nFAILED tests/test_certificates.py::test_formula_is_rebuilt_from_checked_arithmetic\n!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!\n1 failed in 2.21s\n",
+      "killed_after": true
+    },
+    {
+      "module": "rado/drat_certify.py",
+      "name": "drop-z",
+      "line": 95,
+      "old": "sorted({v for v, _c in pairs} | {z})",
+      "new": "sorted({v for v, _c in pairs})",
+      "killed_before": false,
+      "gate_returncode": 0,
+      "linter_regressions": [],
+      "pytest_command": [
+        "-m",
+        "pytest",
+        "-q",
+        "-x",
+        "--tb=short",
+        "tests/test_certificates.py"
+      ],
+      "pytest_returncode": 1,
+      "pytest_output": "F\n=================================== FAILURES ===================================\n_______________ test_formula_is_rebuilt_from_checked_arithmetic ________________\ntests/test_certificates.py:24: in test_formula_is_rebuilt_from_checked_arithmetic\n    assert drat_certify.rebuild_lazy_formula(path, 9, 3) == (3, 2, 1, [])\nE   AssertionError: assert (3, 2, 1, ['x..., 3] != [1]']) == (3, 2, 1, [])\nE     \nE     At index 3 diff: ['x=[[1, 9]] z=3: support [1, 3] != [1]'] != []\nE     Use -v to get more diff\n=========================== short test summary info ============================\nFAILED tests/test_certificates.py::test_formula_is_rebuilt_from_checked_arithmetic\n!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!\n1 failed in 1.93s\n",
+      "killed_after": true
+    },
+    {
+      "module": "rado/drat_certify.py",
+      "name": "ignore-problems",
+      "line": 113,
+      "old": "if problems:\n",
+      "new": "if False:\n",
+      "killed_before": false,
+      "gate_returncode": 0,
+      "linter_regressions": [],
+      "pytest_command": [
+        "-m",
+        "pytest",
+        "-q",
+        "-x",
+        "--tb=short",
+        "tests/test_certificates.py"
+      ],
+      "pytest_returncode": 1,
+      "pytest_output": ".F\n=================================== FAILURES ===================================\n_______________ test_corrupt_formula_never_reaches_replay[value] _______________\ntests/test_certificates.py:46: in test_corrupt_formula_never_reaches_replay\n    rec = drat_certify.certify(9, 3, 'lazy', {}, str(tmp_path))\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nrado/drat_certify.py:124: in certify\n    [tools['kissat'], '-q', '--no-binary', formula, proof],\n     ^^^^^^^^^^^^^^^\nE   KeyError: 'kissat'\n=========================== short test summary info ============================\nFAILED tests/test_certificates.py::test_corrupt_formula_never_reaches_replay[value]\n!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!\n1 failed, 1 passed in 3.08s\n",
+      "killed_after": true
+    },
+    {
+      "module": "rado/drat_certify.py",
+      "name": "verification-marker",
+      "line": 150,
+      "old": "if 's VERIFIED' in out:",
+      "new": "if 'VERIFIED' in out:",
+      "killed_before": false,
+      "gate_returncode": 0,
+      "linter_regressions": [],
+      "pytest_command": [
+        "-m",
+        "pytest",
+        "-q",
+        "-x",
+        "--tb=short",
+        "tests/test_certificates.py"
+      ],
+      "pytest_returncode": 1,
+      "pytest_output": "......F\n=================================== FAILURES ===================================\n_____ test_only_successful_replay_certifies[s NOT VERIFIED\\n-NOT_VERIFIED] _____\ntests/test_certificates.py:90: in test_only_successful_replay_certifies\n    assert rec['verdict'] == verdict\nE   AssertionError: assert 'VERIFIED' == 'NOT_VERIFIED'\nE     \nE     - NOT_VERIFIED\nE     ? ----\nE     + VERIFIED\n=========================== short test summary info ============================\nFAILED tests/test_certificates.py::test_only_successful_replay_certifies[s NOT VERIFIED\\n-NOT_VERIFIED]\n!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!\n1 failed, 6 passed in 3.13s\n",
+      "killed_after": true
+    },
+    {
+      "module": "rado/drat_certify.py",
+      "name": "any-output",
+      "line": 150,
+      "old": "if 's VERIFIED' in out:",
+      "new": "if out:",
+      "killed_before": false,
+      "gate_returncode": 0,
+      "linter_regressions": [],
+      "pytest_command": [
+        "-m",
+        "pytest",
+        "-q",
+        "-x",
+        "--tb=short",
+        "tests/test_certificates.py"
+      ],
+      "pytest_returncode": 1,
+      "pytest_output": "......F\n=================================== FAILURES ===================================\n_____ test_only_successful_replay_certifies[s NOT VERIFIED\\n-NOT_VERIFIED] _____\ntests/test_certificates.py:90: in test_only_successful_replay_certifies\n    assert rec['verdict'] == verdict\nE   AssertionError: assert 'VERIFIED' == 'NOT_VERIFIED'\nE     \nE     - NOT_VERIFIED\nE     ? ----\nE     + VERIFIED\n=========================== short test summary info ============================\nFAILED tests/test_certificates.py::test_only_successful_replay_certifies[s NOT VERIFIED\\n-NOT_VERIFIED]\n!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!\n1 failed, 6 passed in 2.65s\n",
+      "killed_after": true
+    },
+    {
+      "module": "rado/drat_certify.py",
+      "name": "unsat-exit",
+      "line": 135,
+      "old": "if solve.returncode != 20:",
+      "new": "if solve.returncode != 0:",
+      "killed_before": false,
+      "gate_returncode": 0,
+      "linter_regressions": [],
+      "pytest_command": [
+        "-m",
+        "pytest",
+        "-q",
+        "-x",
+        "--tb=short",
+        "tests/test_certificates.py"
+      ],
+      "pytest_returncode": 1,
+      "pytest_output": ".....F\n=================================== FAILURES ===================================\n____ test_only_successful_replay_certifies[c replay\\ns VERIFIED\\n-VERIFIED] ____\ntests/test_certificates.py:90: in test_only_successful_replay_certifies\n    assert rec['verdict'] == verdict\nE   AssertionError: assert 'SOLVER_ERROR' == 'VERIFIED'\nE     \nE     - VERIFIED\nE     + SOLVER_ERROR\n=========================== short test summary info ============================\nFAILED tests/test_certificates.py::test_only_successful_replay_certifies[c replay\\ns VERIFIED\\n-VERIFIED]\n!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!\n1 failed, 5 passed in 2.41s\n",
+      "killed_after": true
+    },
+    {
+      "module": "rado/verify_all.py",
+      "name": "empty-clauses",
+      "line": 239,
+      "old": "and ref['clauses'] > 0",
+      "new": "and ref['clauses'] >= 0",
+      "killed_before": false,
+      "gate_returncode": 0,
+      "linter_regressions": [],
+      "pytest_command": [
+        "-m",
+        "pytest",
+        "-q",
+        "-x",
+        "--tb=short",
+        "tests/test_gate.py"
+      ],
+      "pytest_returncode": 1,
+      "pytest_output": ".F\n=================================== FAILURES ===================================\n_ test_gate_rejects_specific_evidence_corruptions[lazy_n9_N4.json-empty-clause count] _\ntests/test_gate.py:84: in test_gate_rejects_specific_evidence_corruptions\n    assert verify_all.main() == 1\nE   assert 0 == 1\nE    +  where 0 = <function main at 0x77a2200659e0>()\nE    +    where <function main at 0x77a2200659e0> = verify_all.main\n----------------------------- Captured stdout call -----------------------------\n\n=== standalone checker selftest ===\n  [PASS] verify_witness --selftest\n\n=== support enumeration equals naive multiset enumeration (small) ===\n  [PASS] n=2 N=26: supports match (0)\n  [PASS] n=3 N=20: supports match (0)\n  [PASS] n=4 N=15: supports match (0)\n  [PASS] n=9 N=16: supports match (0)\n\n=== convention pinned against published values by pure exhaustion ===\n\n=== rejected convention variants stay rejected ===\n  [PASS] distinct x_i: zero solutions at n=28, N=35 (instance trivially SAT, contradicting a(28)=35)\n  [PASS] z uncolored: n=9 already UNSAT far below the published a(9)=15\n\n=== each claimed term, re-derived from its own evidence files ===\n  [PASS] CLAIMS here and EXPECTED in drat_certify.py agree\n\n=== terms carried by the lazy encoding ===\n  [PASS] LAZY_CLAIMS here and LAZY_EXPECTED in drat_certify.py agree\n  [PASS] no term is claimed twice\n  [PASS] claimed n run contiguously from 9 to 9 (OEIS DATA cannot skip a term)\n  [PASS] a(9)=4: both lazy evidence files present\n  [PASS] a(9)=4 [lazy]: UNSAT at N=4, SAT at N=3\n  [PASS] a(9)=4 [lazy]: records are n=9 under the pinned convention\n  [PASS] a(9)=4 [lazy]: witness re-verified solver-free\n  [PASS] a(9)=4 [lazy]: checker rejects corrupted witnesses\n  [PASS] a(9)=4 [lazy]: all 0 clauses justified by a real solution\n  [PASS] a(9)=4 [lazy]: every clause equals the support of its own solution\n  [PASS] a(9)=4 [lazy]: clause count matches the record and is not zero\n  [PASS] a(9)=4: reach evidence present at both endpoints\n  [PASS] a(9)=4: reach agrees (UNSAT@4 / SAT@3)\n  [PASS] a(9)=4: reach records are n=9 at the right N under the pinned convention\n  [PASS] a(9)=4 [reach]: witness re-verified solver-free\n\n=== the justification check is load-bearing, not decoration ===\n  [PASS] a(37) evidence available to mutate\n  [PASS] unmutated justification passes\n  [PASS] mutation caught: z shifted by one\n  [PASS] mutation caught: a count incremented\n  [PASS] mutation caught: a value incremented\n  [PASS] mutation caught: a count dropped to zero\n  [PASS] mutation caught: z pushed outside the interval\n  [PASS] mutation caught: a non-integer value with exact arithmetic\n  [PASS] mutation caught: a boolean standing in for the value 1\n  [PASS] mutation caught: wrong number of x values\n\n=== prose matches evidence ===\n  [PASS] PREFLIGHT.md present\n  [PASS] PREFLIGHT.md documents: 'repeats allowed'\n  [PASS] PREFLIGHT.md documents: 'z is colored'\n  [PASS] PREFLIGHT.md documents: 'distinct'\n  [PASS] PREFLIGHT.md documents: 'GO'\n\n=== SAT/UNSAT re-solves and DRAT replay (SKIPPED: mock-tools not on PATH / env) ===\n\n38 passed, 0 failed\n\nEVERY CLAIM IN THIS REPOSITORY IS SUPPORTED BY EVIDENCE ON DISK.\n=========================== short test summary info ============================\nFAILED tests/test_gate.py::test_gate_rejects_specific_evidence_corruptions[lazy_n9_N4.json-empty-clause count]\n!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!\n1 failed, 1 passed in 3.85s\n",
+      "killed_after": true
+    },
+    {
+      "module": "rado/verify_all.py",
+      "name": "clause-count",
+      "line": 238,
+      "old": "ref['clauses'] == 2 * len(ref['justifications'])",
+      "new": "ref['clauses'] >= 2 * len(ref['justifications'])",
+      "killed_before": false,
+      "gate_returncode": 0,
+      "linter_regressions": [],
+      "pytest_command": [
+        "-m",
+        "pytest",
+        "-q",
+        "-x",
+        "--tb=short",
+        "tests/test_gate.py"
+      ],
+      "pytest_returncode": 1,
+      "pytest_output": "..F\n=================================== FAILURES ===================================\n_ test_gate_rejects_specific_evidence_corruptions[lazy_n9_N4.json-wrong-count-clause count] _\ntests/test_gate.py:84: in test_gate_rejects_specific_evidence_corruptions\n    assert verify_all.main() == 1\nE   assert 0 == 1\nE    +  where 0 = <function main at 0x7ed70a0d5ee0>()\nE    +    where <function main at 0x7ed70a0d5ee0> = verify_all.main\n----------------------------- Captured stdout call -----------------------------\n\n=== standalone checker selftest ===\n  [PASS] verify_witness --selftest\n\n=== support enumeration equals naive multiset enumeration (small) ===\n  [PASS] n=2 N=26: supports match (0)\n  [PASS] n=3 N=20: supports match (0)\n  [PASS] n=4 N=15: supports match (0)\n  [PASS] n=9 N=16: supports match (0)\n\n=== convention pinned against published values by pure exhaustion ===\n\n=== rejected convention variants stay rejected ===\n  [PASS] distinct x_i: zero solutions at n=28, N=35 (instance trivially SAT, contradicting a(28)=35)\n  [PASS] z uncolored: n=9 already UNSAT far below the published a(9)=15\n\n=== each claimed term, re-derived from its own evidence files ===\n  [PASS] CLAIMS here and EXPECTED in drat_certify.py agree\n\n=== terms carried by the lazy encoding ===\n  [PASS] LAZY_CLAIMS here and LAZY_EXPECTED in drat_certify.py agree\n  [PASS] no term is claimed twice\n  [PASS] claimed n run contiguously from 9 to 9 (OEIS DATA cannot skip a term)\n  [PASS] a(9)=4: both lazy evidence files present\n  [PASS] a(9)=4 [lazy]: UNSAT at N=4, SAT at N=3\n  [PASS] a(9)=4 [lazy]: records are n=9 under the pinned convention\n  [PASS] a(9)=4 [lazy]: witness re-verified solver-free\n  [PASS] a(9)=4 [lazy]: checker rejects corrupted witnesses\n  [PASS] a(9)=4 [lazy]: all 1 clauses justified by a real solution\n  [PASS] a(9)=4 [lazy]: every clause equals the support of its own solution\n  [PASS] a(9)=4 [lazy]: clause count matches the record and is not zero\n  [PASS] a(9)=4: reach evidence present at both endpoints\n  [PASS] a(9)=4: reach agrees (UNSAT@4 / SAT@3)\n  [PASS] a(9)=4: reach records are n=9 at the right N under the pinned convention\n  [PASS] a(9)=4 [reach]: witness re-verified solver-free\n\n=== the justification check is load-bearing, not decoration ===\n  [PASS] a(37) evidence available to mutate\n  [PASS] unmutated justification passes\n  [PASS] mutation caught: z shifted by one\n  [PASS] mutation caught: a count incremented\n  [PASS] mutation caught: a value incremented\n  [PASS] mutation caught: a count dropped to zero\n  [PASS] mutation caught: z pushed outside the interval\n  [PASS] mutation caught: a non-integer value with exact arithmetic\n  [PASS] mutation caught: a boolean standing in for the value 1\n  [PASS] mutation caught: wrong number of x values\n\n=== prose matches evidence ===\n  [PASS] PREFLIGHT.md present\n  [PASS] PREFLIGHT.md documents: 'repeats allowed'\n  [PASS] PREFLIGHT.md documents: 'z is colored'\n  [PASS] PREFLIGHT.md documents: 'distinct'\n  [PASS] PREFLIGHT.md documents: 'GO'\n\n=== SAT/UNSAT re-solves and DRAT replay (SKIPPED: mock-tools not on PATH / env) ===\n\n38 passed, 0 failed\n\nEVERY CLAIM IN THIS REPOSITORY IS SUPPORTED BY EVIDENCE ON DISK.\n=========================== short test summary info ============================\nFAILED tests/test_gate.py::test_gate_rejects_specific_evidence_corruptions[lazy_n9_N4.json-wrong-count-clause count]\n!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!\n1 failed, 2 passed in 2.58s\n",
+      "killed_after": true
+    },
+    {
+      "module": "rado/verify_all.py",
+      "name": "reach-N",
+      "line": 255,
+      "old": "d['N'] == want",
+      "new": "d['N'] <= want",
+      "killed_before": false,
+      "gate_returncode": 0,
+      "linter_regressions": [],
+      "pytest_command": [
+        "-m",
+        "pytest",
+        "-q",
+        "-x",
+        "--tb=short",
+        "tests/test_gate.py"
+      ],
+      "pytest_returncode": 1,
+      "pytest_output": ".......F\n=================================== FAILURES ===================================\n_ test_gate_rejects_specific_evidence_corruptions[reach_n9_N4.json-wrong-N-right N] _\ntests/test_gate.py:84: in test_gate_rejects_specific_evidence_corruptions\n    assert verify_all.main() == 1\nE   assert 0 == 1\nE    +  where 0 = <function main at 0x7bfb7f779ee0>()\nE    +    where <function main at 0x7bfb7f779ee0> = verify_all.main\n----------------------------- Captured stdout call -----------------------------\n\n=== standalone checker selftest ===\n  [PASS] verify_witness --selftest\n\n=== support enumeration equals naive multiset enumeration (small) ===\n  [PASS] n=2 N=26: supports match (0)\n  [PASS] n=3 N=20: supports match (0)\n  [PASS] n=4 N=15: supports match (0)\n  [PASS] n=9 N=16: supports match (0)\n\n=== convention pinned against published values by pure exhaustion ===\n\n=== rejected convention variants stay rejected ===\n  [PASS] distinct x_i: zero solutions at n=28, N=35 (instance trivially SAT, contradicting a(28)=35)\n  [PASS] z uncolored: n=9 already UNSAT far below the published a(9)=15\n\n=== each claimed term, re-derived from its own evidence files ===\n  [PASS] CLAIMS here and EXPECTED in drat_certify.py agree\n\n=== terms carried by the lazy encoding ===\n  [PASS] LAZY_CLAIMS here and LAZY_EXPECTED in drat_certify.py agree\n  [PASS] no term is claimed twice\n  [PASS] claimed n run contiguously from 9 to 9 (OEIS DATA cannot skip a term)\n  [PASS] a(9)=4: both lazy evidence files present\n  [PASS] a(9)=4 [lazy]: UNSAT at N=4, SAT at N=3\n  [PASS] a(9)=4 [lazy]: records are n=9 under the pinned convention\n  [PASS] a(9)=4 [lazy]: witness re-verified solver-free\n  [PASS] a(9)=4 [lazy]: checker rejects corrupted witnesses\n  [PASS] a(9)=4 [lazy]: all 1 clauses justified by a real solution\n  [PASS] a(9)=4 [lazy]: every clause equals the support of its own solution\n  [PASS] a(9)=4 [lazy]: clause count matches the record and is not zero\n  [PASS] a(9)=4: reach evidence present at both endpoints\n  [PASS] a(9)=4: reach agrees (UNSAT@4 / SAT@3)\n  [PASS] a(9)=4: reach records are n=9 at the right N under the pinned convention\n  [PASS] a(9)=4 [reach]: witness re-verified solver-free\n\n=== the justification check is load-bearing, not decoration ===\n  [PASS] a(37) evidence available to mutate\n  [PASS] unmutated justification passes\n  [PASS] mutation caught: z shifted by one\n  [PASS] mutation caught: a count incremented\n  [PASS] mutation caught: a value incremented\n  [PASS] mutation caught: a count dropped to zero\n  [PASS] mutation caught: z pushed outside the interval\n  [PASS] mutation caught: a non-integer value with exact arithmetic\n  [PASS] mutation caught: a boolean standing in for the value 1\n  [PASS] mutation caught: wrong number of x values\n\n=== prose matches evidence ===\n  [PASS] PREFLIGHT.md present\n  [PASS] PREFLIGHT.md documents: 'repeats allowed'\n  [PASS] PREFLIGHT.md documents: 'z is colored'\n  [PASS] PREFLIGHT.md documents: 'distinct'\n  [PASS] PREFLIGHT.md documents: 'GO'\n\n=== SAT/UNSAT re-solves and DRAT replay (SKIPPED: mock-tools not on PATH / env) ===\n\n38 passed, 0 failed\n\nEVERY CLAIM IN THIS REPOSITORY IS SUPPORTED BY EVIDENCE ON DISK.\n=========================== short test summary info ============================\nFAILED tests/test_gate.py::test_gate_rejects_specific_evidence_corruptions[reach_n9_N4.json-wrong-N-right N]\n!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!\n1 failed, 7 passed in 3.03s\n",
+      "killed_after": true
+    },
+    {
+      "module": "rado/verify_all.py",
+      "name": "reach-convention",
+      "line": 257,
+      "old": "and d['convention']['z_colored'] is True\n                      for d, want",
+      "new": "and d['convention']['z_colored'] is not None\n                      for d, want",
+      "killed_before": false,
+      "gate_returncode": 0,
+      "linter_regressions": [],
+      "pytest_command": [
+        "-m",
+        "pytest",
+        "-q",
+        "-x",
+        "--tb=short",
+        "tests/test_gate.py"
+      ],
+      "pytest_returncode": 1,
+      "pytest_output": ".........F\n=================================== FAILURES ===================================\n_ test_gate_rejects_specific_evidence_corruptions[reach_n9_N4.json-convention-pinned convention] _\ntests/test_gate.py:84: in test_gate_rejects_specific_evidence_corruptions\n    assert verify_all.main() == 1\nE   assert 0 == 1\nE    +  where 0 = <function main at 0x70b1c5e25ee0>()\nE    +    where <function main at 0x70b1c5e25ee0> = verify_all.main\n----------------------------- Captured stdout call -----------------------------\n\n=== standalone checker selftest ===\n  [PASS] verify_witness --selftest\n\n=== support enumeration equals naive multiset enumeration (small) ===\n  [PASS] n=2 N=26: supports match (0)\n  [PASS] n=3 N=20: supports match (0)\n  [PASS] n=4 N=15: supports match (0)\n  [PASS] n=9 N=16: supports match (0)\n\n=== convention pinned against published values by pure exhaustion ===\n\n=== rejected convention variants stay rejected ===\n  [PASS] distinct x_i: zero solutions at n=28, N=35 (instance trivially SAT, contradicting a(28)=35)\n  [PASS] z uncolored: n=9 already UNSAT far below the published a(9)=15\n\n=== each claimed term, re-derived from its own evidence files ===\n  [PASS] CLAIMS here and EXPECTED in drat_certify.py agree\n\n=== terms carried by the lazy encoding ===\n  [PASS] LAZY_CLAIMS here and LAZY_EXPECTED in drat_certify.py agree\n  [PASS] no term is claimed twice\n  [PASS] claimed n run contiguously from 9 to 9 (OEIS DATA cannot skip a term)\n  [PASS] a(9)=4: both lazy evidence files present\n  [PASS] a(9)=4 [lazy]: UNSAT at N=4, SAT at N=3\n  [PASS] a(9)=4 [lazy]: records are n=9 under the pinned convention\n  [PASS] a(9)=4 [lazy]: witness re-verified solver-free\n  [PASS] a(9)=4 [lazy]: checker rejects corrupted witnesses\n  [PASS] a(9)=4 [lazy]: all 1 clauses justified by a real solution\n  [PASS] a(9)=4 [lazy]: every clause equals the support of its own solution\n  [PASS] a(9)=4 [lazy]: clause count matches the record and is not zero\n  [PASS] a(9)=4: reach evidence present at both endpoints\n  [PASS] a(9)=4: reach agrees (UNSAT@4 / SAT@3)\n  [PASS] a(9)=4: reach records are n=9 at the right N under the pinned convention\n  [PASS] a(9)=4 [reach]: witness re-verified solver-free\n\n=== the justification check is load-bearing, not decoration ===\n  [PASS] a(37) evidence available to mutate\n  [PASS] unmutated justification passes\n  [PASS] mutation caught: z shifted by one\n  [PASS] mutation caught: a count incremented\n  [PASS] mutation caught: a value incremented\n  [PASS] mutation caught: a count dropped to zero\n  [PASS] mutation caught: z pushed outside the interval\n  [PASS] mutation caught: a non-integer value with exact arithmetic\n  [PASS] mutation caught: a boolean standing in for the value 1\n  [PASS] mutation caught: wrong number of x values\n\n=== prose matches evidence ===\n  [PASS] PREFLIGHT.md present\n  [PASS] PREFLIGHT.md documents: 'repeats allowed'\n  [PASS] PREFLIGHT.md documents: 'z is colored'\n  [PASS] PREFLIGHT.md documents: 'distinct'\n  [PASS] PREFLIGHT.md documents: 'GO'\n\n=== SAT/UNSAT re-solves and DRAT replay (SKIPPED: mock-tools not on PATH / env) ===\n\n38 passed, 0 failed\n\nEVERY CLAIM IN THIS REPOSITORY IS SUPPORTED BY EVIDENCE ON DISK.\n=========================== short test summary info ============================\nFAILED tests/test_gate.py::test_gate_rejects_specific_evidence_corruptions[reach_n9_N4.json-convention-pinned convention]\n!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!\n1 failed, 9 passed in 3.35s\n",
+      "killed_after": true
+    },
+    {
+      "module": "rado/verify_all.py",
+      "name": "reach-witness",
+      "line": 261,
+      "old": "r_good[0], fail_detail=r_good[1]",
+      "new": "True, fail_detail=r_good[1]",
+      "killed_before": false,
+      "gate_returncode": 0,
+      "linter_regressions": [],
+      "pytest_command": [
+        "-m",
+        "pytest",
+        "-q",
+        "-x",
+        "--tb=short",
+        "tests/test_gate.py"
+      ],
+      "pytest_returncode": 1,
+      "pytest_output": "..........F\n=================================== FAILURES ===================================\n_ test_gate_rejects_specific_evidence_corruptions[reach_n9_N3.json-color-witness re-verified] _\ntests/test_gate.py:84: in test_gate_rejects_specific_evidence_corruptions\n    assert verify_all.main() == 1\nE   assert 0 == 1\nE    +  where 0 = <function main at 0x75a10aa2de40>()\nE    +    where <function main at 0x75a10aa2de40> = verify_all.main\n----------------------------- Captured stdout call -----------------------------\n\n=== standalone checker selftest ===\n  [PASS] verify_witness --selftest\n\n=== support enumeration equals naive multiset enumeration (small) ===\n  [PASS] n=2 N=26: supports match (0)\n  [PASS] n=3 N=20: supports match (0)\n  [PASS] n=4 N=15: supports match (0)\n  [PASS] n=9 N=16: supports match (0)\n\n=== convention pinned against published values by pure exhaustion ===\n\n=== rejected convention variants stay rejected ===\n  [PASS] distinct x_i: zero solutions at n=28, N=35 (instance trivially SAT, contradicting a(28)=35)\n  [PASS] z uncolored: n=9 already UNSAT far below the published a(9)=15\n\n=== each claimed term, re-derived from its own evidence files ===\n  [PASS] CLAIMS here and EXPECTED in drat_certify.py agree\n\n=== terms carried by the lazy encoding ===\n  [PASS] LAZY_CLAIMS here and LAZY_EXPECTED in drat_certify.py agree\n  [PASS] no term is claimed twice\n  [PASS] claimed n run contiguously from 9 to 9 (OEIS DATA cannot skip a term)\n  [PASS] a(9)=4: both lazy evidence files present\n  [PASS] a(9)=4 [lazy]: UNSAT at N=4, SAT at N=3\n  [PASS] a(9)=4 [lazy]: records are n=9 under the pinned convention\n  [PASS] a(9)=4 [lazy]: witness re-verified solver-free\n  [PASS] a(9)=4 [lazy]: checker rejects corrupted witnesses\n  [PASS] a(9)=4 [lazy]: all 1 clauses justified by a real solution\n  [PASS] a(9)=4 [lazy]: every clause equals the support of its own solution\n  [PASS] a(9)=4 [lazy]: clause count matches the record and is not zero\n  [PASS] a(9)=4: reach evidence present at both endpoints\n  [PASS] a(9)=4: reach agrees (UNSAT@4 / SAT@3)\n  [PASS] a(9)=4: reach records are n=9 at the right N under the pinned convention\n  [PASS] a(9)=4 [reach]: witness re-verified solver-free\n\n=== the justification check is load-bearing, not decoration ===\n  [PASS] a(37) evidence available to mutate\n  [PASS] unmutated justification passes\n  [PASS] mutation caught: z shifted by one\n  [PASS] mutation caught: a count incremented\n  [PASS] mutation caught: a value incremented\n  [PASS] mutation caught: a count dropped to zero\n  [PASS] mutation caught: z pushed outside the interval\n  [PASS] mutation caught: a non-integer value with exact arithmetic\n  [PASS] mutation caught: a boolean standing in for the value 1\n  [PASS] mutation caught: wrong number of x values\n\n=== prose matches evidence ===\n  [PASS] PREFLIGHT.md present\n  [PASS] PREFLIGHT.md documents: 'repeats allowed'\n  [PASS] PREFLIGHT.md documents: 'z is colored'\n  [PASS] PREFLIGHT.md documents: 'distinct'\n  [PASS] PREFLIGHT.md documents: 'GO'\n\n=== SAT/UNSAT re-solves and DRAT replay (SKIPPED: mock-tools not on PATH / env) ===\n\n38 passed, 0 failed\n\nEVERY CLAIM IN THIS REPOSITORY IS SUPPORTED BY EVIDENCE ON DISK.\n=========================== short test summary info ============================\nFAILED tests/test_gate.py::test_gate_rejects_specific_evidence_corruptions[reach_n9_N3.json-color-witness re-verified]\n!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!\n1 failed, 10 passed in 5.75s\n",
+      "killed_after": true
+    },
+    {
+      "module": "tools/oeis_lint.py",
+      "name": "lost-duplicate",
+      "line": 338,
+      "old": "remaining.remove(o)",
+      "new": "pass",
+      "killed_before": false,
+      "gate_returncode": 0,
+      "linter_regressions": [],
+      "pytest_command": [
+        "-m",
+        "pytest",
+        "-q",
+        "-x",
+        "--tb=short",
+        "tests/test_oeis_lint.py"
+      ],
+      "pytest_returncode": 1,
+      "pytest_output": "........F\n=================================== FAILURES ===================================\n___________________ test_preservation_counts_duplicate_lines ___________________\ntests/test_oeis_lint.py:49: in test_preservation_counts_duplicate_lines\n    assert oeis_lint._multiset_lost(['same', 'same'], ['same']) == 'same'\nE   AssertionError: assert None == 'same'\nE    +  where None = <function _multiset_lost at 0x7ae171af8f40>(['same', 'same'], ['same'])\nE    +    where <function _multiset_lost at 0x7ae171af8f40> = oeis_lint._multiset_lost\n=========================== short test summary info ============================\nFAILED tests/test_oeis_lint.py::test_preservation_counts_duplicate_lines - As...\n!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!\n1 failed, 8 passed in 2.70s\n",
+      "killed_after": true
+    },
+    {
+      "module": "tools/oeis_lint.py",
+      "name": "leap-day",
+      "line": 328,
+      "old": "1 <= day <= calendar.monthrange(year, m)[1]",
+      "new": "1 <= day < calendar.monthrange(year, m)[1]",
+      "killed_before": false,
+      "gate_returncode": 0,
+      "linter_regressions": [],
+      "pytest_command": [
+        "-m",
+        "pytest",
+        "-q",
+        "-x",
+        "--tb=short",
+        "tests/test_oeis_lint.py"
+      ],
+      "pytest_returncode": 1,
+      "pytest_output": ".........F\n=================================== FAILURES ===================================\n___________ test_date_validation_includes_last_day[Feb-29-2024-True] ___________\ntests/test_oeis_lint.py:59: in test_date_validation_includes_last_day\n    assert oeis_lint._valid_date(month, day, year) is valid\nE   AssertionError: assert False is True\nE    +  where False = <function _valid_date at 0x77ca52bd4ea0>('Feb', 29, 2024)\nE    +    where <function _valid_date at 0x77ca52bd4ea0> = oeis_lint._valid_date\n=========================== short test summary info ============================\nFAILED tests/test_oeis_lint.py::test_date_validation_includes_last_day[Feb-29-2024-True]\n!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!\n1 failed, 9 passed in 2.81s\n",
+      "killed_after": true
+    },
+    {
+      "module": "tools/oeis_lint.py",
+      "name": "min-terms",
+      "line": 460,
+      "old": "if len(post_terms) < 4:",
+      "new": "if len(post_terms) <= 4:",
+      "killed_before": false,
+      "gate_returncode": 0,
+      "linter_regressions": [],
+      "pytest_command": [
+        "-m",
+        "pytest",
+        "-q",
+        "-x",
+        "--tb=short",
+        "tests/test_oeis_lint.py"
+      ],
+      "pytest_returncode": 1,
+      "pytest_output": "F\n=================================== FAILURES ===================================\n____________________ test_valid_four_term_spec_is_accepted _____________________\ntests/test_oeis_lint.py:20: in test_valid_four_term_spec_is_accepted\n    assert ok, findings\nE   AssertionError: [('FAIL', 'data-min-terms', 'only 4 DATA term(s); minimum is 4')]\nE   assert False\n=========================== short test summary info ============================\nFAILED tests/test_oeis_lint.py::test_valid_four_term_spec_is_accepted - Asser...\n!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!\n1 failed in 2.36s\n",
+      "killed_after": true
+    },
+    {
+      "module": "tools/oeis_lint.py",
+      "name": "term-prefix",
+      "line": 440,
+      "old": "if post_terms[:len(old_terms)] != old_terms:",
+      "new": "if post_terms[:len(old_terms)] == old_terms:",
+      "killed_before": true,
+      "gate_returncode": 0,
+      "linter_regressions": [
+        "u_altered_term",
+        "u_missing_ext_credit"
+      ],
+      "pytest_command": [
+        "-m",
+        "pytest",
+        "-q",
+        "-x",
+        "--tb=short",
+        "tests/test_oeis_lint.py"
+      ],
+      "pytest_returncode": 1,
+      "pytest_output": ".F\n=================================== FAILURES ===================================\n____________ test_changed_or_removed_term_is_rejected[3, 7, 9, 12] _____________\ntests/test_oeis_lint.py:27: in test_changed_or_removed_term_is_rejected\n    assert not ok\nE   assert not True\n=========================== short test summary info ============================\nFAILED tests/test_oeis_lint.py::test_changed_or_removed_term_is_rejected[3, 7, 9, 12]\n!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!\n1 failed, 1 passed in 1.92s\n",
+      "killed_after": true
+    },
+    {
+      "module": "tools/oeis_lint.py",
+      "name": "parse-offset",
+      "line": 237,
+      "old": "offset = int(mo.group(1)) if mo else None",
+      "new": "offset = abs(int(mo.group(1))) if mo else None",
+      "killed_before": false,
+      "gate_returncode": 0,
+      "linter_regressions": [],
+      "pytest_command": [
+        "-m",
+        "pytest",
+        "-q",
+        "-x",
+        "--tb=short",
+        "tests/test_oeis_lint.py"
+      ],
+      "pytest_returncode": 1,
+      "pytest_output": "...F\n=================================== FAILURES ===================================\n____________ test_parser_preserves_all_data_lines_and_signed_offset ____________\ntests/test_oeis_lint.py:37: in test_parser_preserves_all_data_lines_and_signed_offset\n    assert parsed['offset'] == -2\nE   assert 2 == -2\n=========================== short test summary info ============================\nFAILED tests/test_oeis_lint.py::test_parser_preserves_all_data_lines_and_signed_offset\n!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!\n1 failed, 3 passed in 1.94s\n",
+      "killed_after": true
+    }
+  ],
+  "baseline_pytest": {
+    "returncode": 0,
+    "output": "....................x................................................... [ 48%]\n........................................................................ [ 97%]\n....                                                                     [100%]\n147 passed, 1 xfailed in 8.37s\n"
+  },
+  "final_checks": {
+    "/work/.test-env/bin/pytest -q": {
+      "returncode": 0,
+      "output": "....................x................................................... [ 48%]\n........................................................................ [ 97%]\n....                                                                     [100%]\n147 passed, 1 xfailed in 6.41s\n"
+    },
+    "python rado/verify_all.py": {
+      "returncode": 0,
+      "output": "\n=== SAT/UNSAT re-solves and DRAT replay (SKIPPED: kissat, drat-trim not on PATH / env) ===\n\n430 passed, 0 failed\n\nEVERY CLAIM IN THIS REPOSITORY IS SUPPORTED BY EVIDENCE ON DISK."
+    },
+    "python tools/oeis_lint.py --selftest": {
+      "returncode": 1,
+      "output": "SELFTEST: 47 cases, 14 passed, 33 failed"
+    },
+    "/work/.test-env/bin/ruff check .": {
+      "returncode": 0,
+      "output": "All checks passed!"
+    },
+    "git diff --check": {
+      "returncode": 0,
+      "output": ""
+    }
+  }
+}

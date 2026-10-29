@@ -34,6 +34,8 @@ jobs:
         with:
           python-version: "3.13"
       - run: python rado/verify_all.py
+      - run: pip install pytest==8.4.2
+      - run: pytest -q
 
   # The submission linter carries its own fixture suite. It is what stands
   # between a paste and an OEIS editor, so it is graded on every push.
