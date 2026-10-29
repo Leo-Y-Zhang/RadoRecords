@@ -147,11 +147,14 @@ def certify(n, N, mode, tools, workdir, timeout=None):
         return rec
     rec['check_s'] = round(time.time() - t0, 1)
     out = chk.stdout or ''
-    if 's VERIFIED' in out:
-        rec['verdict'] = 'VERIFIED'
-    elif 's NOT VERIFIED' in out:
+    # Whole status lines only, failure first: a comment that merely contains
+    # the text "s VERIFIED" must never turn a failed replay into a pass.
+    status = {line.strip() for line in out.splitlines()}
+    if 's NOT VERIFIED' in status:
         rec['verdict'] = 'NOT_VERIFIED'
         rec['detail'] = out.strip()[-400:]
+    elif 's VERIFIED' in status:
+        rec['verdict'] = 'VERIFIED'
     else:
         rec['verdict'] = 'SOLVER_ERROR'
         rec['detail'] = (out + (chk.stderr or '')).strip()[-400:]
